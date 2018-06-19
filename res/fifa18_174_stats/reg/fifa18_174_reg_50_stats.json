@@ -1,0 +1,115 @@
+{
+  "crest_base_url": "https://www.fifaindex.com/static/FIFA18/images/crest/256/light/",
+  "teams": [
+    {
+      "name": "FC Bayern",
+      "league": "Bundesliga",
+      "country": "Germany",
+      "attack": "91",
+      "midfield": "85",
+      "defense": "86",
+      "overall": "86",
+      "rating": "50",
+      "crest_id": "21.png"
+    },
+    {
+      "name": "Real Madrid",
+      "league": "Liga BBVA",
+      "country": "Spain",
+      "attack": "86",
+      "midfield": "86",
+      "defense": "86",
+      "overall": "86",
+      "rating": "50",
+      "crest_id": "243.png"
+    },
+    {
+      "name": "FC Barcelona",
+      "league": "Liga BBVA",
+      "country": "Spain",
+      "attack": "93",
+      "midfield": "85",
+      "defense": "84",
+      "overall": "85",
+      "rating": "50",
+      "crest_id": "241.png"
+    },
+    {
+      "name": "Juventus",
+      "league": "Serie A TIM",
+      "country": "Italy",
+      "attack": "87",
+      "midfield": "84",
+      "defense": "84",
+      "overall": "85",
+      "rating": "50",
+      "crest_id": "45.png"
+    },
+    {
+      "name": "Manchester City",
+      "league": "Barclays PL",
+      "country": "England",
+      "attack": "85",
+      "midfield": "87",
+      "defense": "83",
+      "overall": "84",
+      "rating": "50",
+      "crest_id": "10.png"
+    },
+    {
+      "name": "PSG",
+      "league": "Ligue 1",
+      "country": "France",
+      "attack": "86",
+      "midfield": "82",
+      "defense": "82",
+      "overall": "83,
+      "rating": "50",
+      "crest_id": "73.png""
+    },
+    {
+      "name": "Spurs",
+      "league": "Barclays PL",
+      "country": "England",
+      "attack": "85",
+      "midfield": "83",
+      "defense": "82",
+      "overall": "83",
+      "rating": "50",
+      "crest_id": "18.png"
+    },
+    {
+      "name": "Manchester Utd",
+      "league": "Barclays PL",
+      "country": "England",
+      "attack": "85",
+      "midfield": "83",
+      "defense": "81",
+      "overall": "83",
+      "rating": "50",
+      "crest_id": "11.png"
+    },
+    {
+      "name": "Atlético Madrid",
+      "league": "Liga BBVA",
+      "country": "Spain",
+      "attack": "85",
+      "midfield": "82",
+      "defense": "83",
+      "overall": "83",
+      "rating": "50",
+      "crest_id": "240.png"
+    },
+    {
+      "name": "Chelsea",
+      "league": "Barclays PL",
+      "country": "England",
+      "attack": "84",
+      "midfield": "86",
+      "defense": "82",
+      "overall": "83",
+      "rating": "50",
+      "crest_id": "5.png"
+    }
+  ]
+}

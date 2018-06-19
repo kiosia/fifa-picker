@@ -1,0 +1,104 @@
+{
+  "crest_base_url": "https://www.fifaindex.com/static/FIFA18/images/crest/256/light/",
+  "teams": [
+    {
+      "name": "Bohemian FC",
+      "league": "SSE Airtricity Lge",
+      "country": "Ireland",
+      "attack": "61",
+      "midfield": "59",
+      "defense": "58",
+      "overall": "59",
+      "rating": "05",
+      "crest_id": "305.png"
+    },
+    {
+      "name": "Sogndal",
+      "league": "Tippeligaen",
+      "country": "Norway",
+      "attack": "60",
+      "midfield": "56",
+      "defense": "59",
+      "overall": "59",
+      "rating": "05",
+      "crest_id": "1465.png"
+    },
+    {
+      "name": "Derry City",
+      "league": "SSE Airtricity Lge",
+      "country": "Ireland",
+      "attack": "58",
+      "midfield": "59",
+      "defense": "57",
+      "overall": "58",
+      "rating": "05",
+      "crest_id": "445.png"
+    },
+    {
+      "name": "Sligo Rovers",
+      "league": "SSE Airtricity Lge",
+      "country": "Ireland",
+      "attack": "57",
+      "midfield": "57",
+      "defense": "57",
+      "overall": "58",
+      "rating": "05",
+      "crest_id": "563.png"
+    },
+    {
+      "name": "Limerick",
+      "league": "SSE Airtricity Lge",
+      "country": "Ireland",
+      "attack": "59",
+      "midfield": "58",
+      "defense": "55",
+      "overall": "57",
+      "rating": "05",
+      "crest_id": "111285.png"
+    },
+    {
+      "name": "Bray Wanderers",
+      "league": "SSE Airtricity Lge",
+      "country": "Ireland",
+      "attack": "57",
+      "midfield": "58",
+      "defense": "54",
+      "overall": "56",
+      "rating": "05",
+      "crest_id": "838.png"
+    },
+    {
+      "name": "Finn Harps",
+      "league": "SSE Airtricity Lge",
+      "country": "Ireland",
+      "attack": "55",
+      "midfield": "58",
+      "defense": "54",
+      "overall": "56",
+      "rating": "05",
+      "crest_id": "111131.png"
+    },
+    {
+      "name": "Drogheda Utd",
+      "league": "SSE Airtricity Lge",
+      "country": "Ireland",
+      "attack": "55",
+      "midfield": "55",
+      "defense": "55",
+      "overall": "55",
+      "rating": "05",
+      "crest_id": "1572.png"
+    },
+    {
+      "name": "Galway United",
+      "league": "SSE Airtricity Lge",
+      "country": "Ireland",
+      "attack": "52",
+      "midfield": "52",
+      "defense": "52",
+      "overall": "52",
+      "rating": "05",
+      "crest_id": "1571.png"
+    }
+  ]
+}

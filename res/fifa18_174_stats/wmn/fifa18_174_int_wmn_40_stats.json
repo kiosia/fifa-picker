@@ -1,0 +1,77 @@
+{
+  "crest_base_url": "https://www.fifaindex.com/static/FIFA18/images/crest/256/light/",
+  "teams": [
+    {
+      "name": "Brazil",
+      "attack": "80",
+      "midfield": "79",
+      "defense": "77",
+      "overall": "78",
+      "rating": "40",
+      "crest_id": "112999.png"
+    },
+    {
+      "name": "Australia",
+      "attack": "80",
+      "midfield": "79",
+      "defense": "75",
+      "overall": "78",
+      "rating": "40",
+      "crest_id": "112998.png"
+    },
+    {
+      "name": "Sweden",
+      "attack": "79",
+      "midfield": "78",
+      "defense": "77",
+      "overall": "78",
+      "rating": "40",
+      "crest_id": "113008.png"
+    },
+    {
+      "name": "France",
+      "attack": "73",
+      "midfield": "79",
+      "defense": "77",
+      "overall": "77",
+      "rating": "40",
+      "crest_id": "113003.png"
+    },
+    {
+      "name": "China PR",
+      "attack": "77",
+      "midfield": "76",
+      "defense": "77",
+      "overall": "76",
+      "rating": "40",
+      "crest_id": "113001.png"
+    },
+    {
+      "name": "Canada",
+      "attack": "74",
+      "midfield": "83",
+      "defense": "73",
+      "overall": "76",
+      "rating": "40",
+      "crest_id": "113000.png"
+    },
+    {
+      "name": "New Zealand Women",
+      "attack": "77",
+      "midfield": "74",
+      "defense": "75",
+      "overall": "75",
+      "rating": "40",
+      "crest_id": "113258.png"
+    },
+    {
+      "name": "Spain",
+      "attack": "76",
+      "midfield": "75",
+      "defense": "75",
+      "overall": "75",
+      "rating": "40",
+      "crest_id": "113012.png"
+    }
+  ]
+}

@@ -1,0 +1,713 @@
+{
+  "crest_base_url": "https://www.fifaindex.com/static/FIFA18/images/crest/256/light/",
+  "teams": [
+    {
+      "name": "Stabæk Fotball",
+      "league": "Tippeligaen",
+      "country": "Norway",
+      "attack": "70",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "917.png"
+    },
+    {
+      "name": "Hobro IK",
+      "league": "Alka Superliga",
+      "country": "Denmark",
+      "attack": "68",
+      "midfield": "64",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "112425.png"
+    },
+    {
+      "name": "Kristiansund BK",
+      "league": "Tippeligaen",
+      "country": "Norway",
+      "attack": "67",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "113459.png"
+    },
+    {
+      "name": "Iwata",
+      "league": "Japan J1 League (1)",
+      "country": "Japan",
+      "attack": "67",
+      "midfield": "63",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "101144.png"
+    },
+    {
+      "name": "Fortuna Köln",
+      "league": "Germany 3. Liga (3)",
+      "attack": "66",
+      "midfield": "64",
+      "defense": "63",
+      "overall": "64"
+    },,
+    "rating": "15",
+      "crest_id": "110169.png"
+    {
+      "name": "Wisła Płock",
+      "league": "Ekstraklasa",
+      "country": "Poland",
+      "attack": "66",
+      "midfield": "64",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1569.png"
+    },
+    {
+      "name": "Lyngby BK",
+      "league": "Alka Superliga",
+      "country": "Denmark",
+      "attack": "66",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "15001.png"
+    },
+    {
+      "name": "Chemnitzer FC",
+      "league": "Germany 3. Liga (3)",
+      "attack": "66",
+      "midfield": "63",
+      "defense": "63",
+      "overall": "64"
+    },,
+    "rating": "15",
+      "crest_id": "507.png"
+    {
+      "name": "Sandecja Nowy Sącz",
+      "league": "Ekstraklasa",
+      "country": "Poland",
+      "attack": "66",
+      "midfield": "62",
+      "defense": "62",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "112508.png"
+    },
+    {
+      "name": "Newcastle Jets",
+      "league": "Hyundai A-League",
+      "country": "Australia",
+      "attack": "65",
+      "midfield": "65",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "111398.png"
+    },
+    {
+      "name": "Adelaide United",
+      "league": "Hyundai A-League",
+      "country": "Australia",
+      "attack": "65",
+      "midfield": "64",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "111393.png"
+    },
+    {
+      "name": "Rochdale",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "65",
+      "midfield": "64",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1955.png"
+    },
+    {
+      "name": "Partick Thistle",
+      "league": "Scottish Prem",
+      "country": "Scotland",
+      "attack": "65",
+      "midfield": "64",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1754.png"
+    },
+    {
+      "name": "Northampton",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "65",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1930.png"
+    },
+    {
+      "name": "IK Sirius",
+      "league": "Allsvenskan",
+      "country": "Sweden",
+      "attack": "65",
+      "midfield": "62",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "113458.png"
+    },
+    {
+      "name": "Plymouth Argyle",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "64",
+      "midfield": "65",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1929.png"
+    },
+    {
+      "name": "Oldham Athletic",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "64",
+      "midfield": "65",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1920.png"
+    },
+    {
+      "name": "Silkeborg IF",
+      "league": "Alka Superliga",
+      "country": "Denmark",
+      "attack": "64",
+      "midfield": "65",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "270.png"
+    },
+    {
+      "name": "Motherwell",
+      "league": "Scottish Prem",
+      "country": "Scotland",
+      "attack": "64",
+      "midfield": "64",
+      "defense": "65",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "83.png"
+    },
+    {
+      "name": "SV Mattersburg",
+      "league": "Ö. Bundesliga",
+      "country": "Austria",
+      "attack": "64",
+      "midfield": "64",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1785.png"
+    },
+    {
+      "name": "Al Fateh",
+      "league": "ALJ League",
+      "country": "Saudi Arabia",
+      "attack": "64",
+      "midfield": "64",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "112390.png"
+    },
+    {
+      "name": "Hallescher FC",
+      "league": "Germany 3. Liga (3)",
+      "attack": "64",
+      "midfield": "64",
+      "defense": "63",
+      "overall": "64"
+    },,
+    "rating": "15",
+      "crest_id": "110482.png"
+    {
+      "name": "Tromsø IL",
+      "league": "Tippeligaen",
+      "country": "Norway",
+      "attack": "64",
+      "midfield": "63",
+      "defense": "65",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "418.png"
+    },
+    {
+      "name": "SV Meppen",
+      "league": "Germany 3. Liga (3)",
+      "attack": "64",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "64"
+    },,
+    "rating": "15",
+      "crest_id": "110597.png"
+    {
+      "name": "LASK Linz",
+      "league": "Ö. Bundesliga",
+      "country": "Austria",
+      "attack": "63",
+      "midfield": "65",
+      "defense": "65",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "252.png"
+    },
+    {
+      "name": "Sportfreunde Lotte",
+      "league": "Germany 3. Liga (3)",
+      "attack": "63",
+      "midfield": "65",
+      "defense": "64",
+      "overall": "64"
+    },,
+    "rating": "15",
+      "crest_id": "110700.png"
+    {
+      "name": "Bristol Rovers",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "63",
+      "midfield": "65",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1962.png"
+    },
+    {
+      "name": "Walsall",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "63",
+      "midfield": "65",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1803.png"
+    },
+    {
+      "name": "SønderjyskE",
+      "league": "Alka Superliga",
+      "country": "Denmark",
+      "attack": "63",
+      "midfield": "65",
+      "defense": "61",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1447.png"
+    },
+    {
+      "name": "Notts County",
+      "league": "Football League 2",
+      "country": "England",
+      "attack": "63",
+      "midfield": "64",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1937.png"
+    },
+    {
+      "name": "Doncaster",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "63",
+      "midfield": "64",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "142.png"
+    },
+    {
+      "name": "Bury",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "63",
+      "midfield": "63",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1945.png"
+    },
+    {
+      "name": "Daegu FC",
+      "league": "K LEAGUE Classic",
+      "country": "South Korea",
+      "attack": "62",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "2056.png"
+    },
+    {
+      "name": "FK Haugesund",
+      "league": "Tippeligaen",
+      "country": "Norway",
+      "attack": "62",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "1463.png"
+    },
+    {
+      "name": "Admira Wacker",
+      "league": "Ö. Bundesliga",
+      "country": "Austria",
+      "attack": "62",
+      "midfield": "63",
+      "defense": "62",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "111821.png"
+    },
+    {
+      "name": "Wolfsberger AC",
+      "league": "Ö. Bundesliga",
+      "country": "Austria",
+      "attack": "62",
+      "midfield": "62",
+      "defense": "64",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "111822.png"
+    },
+    {
+      "name": "Central Coast",
+      "league": "Hyundai A-League",
+      "country": "Australia",
+      "attack": "61",
+      "midfield": "65",
+      "defense": "63",
+      "overall": "64",
+      "rating": "15",
+      "crest_id": "111396.png"
+    },
+    {
+      "name": "CA Chacarita Juniors",
+      "league": "Primera División",
+      "country": "Argentina",
+      "attack": "69",
+      "midfield": "63",
+      "defense": "63",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "110405.png"
+    },
+    {
+      "name": "Viking FK",
+      "league": "Tippeligaen",
+      "country": "Norway",
+      "attack": "67",
+      "midfield": "64",
+      "defense": "61",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "300.png"
+    },
+    {
+      "name": "Well. Phoenix",
+      "league": "Hyundai A-League",
+      "country": "Australia",
+      "attack": "66",
+      "midfield": "64",
+      "defense": "61",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "111766.png"
+    },
+    {
+      "name": "Mansfield Town",
+      "league": "Football League 2",
+      "country": "England",
+      "attack": "66",
+      "midfield": "63",
+      "defense": "63",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "1940.png"
+    },
+    {
+      "name": "Coventry City",
+      "league": "Football League 2",
+      "country": "England",
+      "attack": "66",
+      "midfield": "63",
+      "defense": "62",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "1800.png"
+    },
+    {
+      "name": "Cortuluá",
+      "league": "Liga Dimayor",
+      "country": "Colombia",
+      "attack": "65",
+      "midfield": "66",
+      "defense": "59",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "112934.png"
+    },
+    {
+      "name": "Lillestrøm SK",
+      "league": "Tippeligaen",
+      "country": "Norway",
+      "attack": "65",
+      "midfield": "63",
+      "defense": "63",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "299.png"
+    },
+    {
+      "name": "Accrington",
+      "league": "Football League 2",
+      "country": "England",
+      "attack": "65",
+      "midfield": "63",
+      "defense": "62",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "110313.png"
+    },
+    {
+      "name": "Sandefjord",
+      "league": "Tippeligaen",
+      "country": "Norway",
+      "attack": "64",
+      "midfield": "62",
+      "defense": "63",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "1757.png"
+    },
+    {
+      "name": "FC Thun",
+      "league": "Raiffeisen SL",
+      "country": "Switzerland",
+      "attack": "64",
+      "midfield": "62",
+      "defense": "60",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "1715.png"
+    },
+    {
+      "name": "Blackpool",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "63",
+      "midfield": "65",
+      "defense": "62",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "1926.png"
+    },
+    {
+      "name": "Carl Zeiss Jena",
+      "league": "Germany 3. Liga (3)",
+      "attack": "63",
+      "midfield": "64",
+      "defense": "63",
+      "overall": "63"
+    },,
+    "rating": "15",
+      "crest_id": "110591.png"
+    {
+      "name": "US Quevilly Rouen",
+      "league": "Ligue 2",
+      "country": "France",
+      "attack": "63",
+      "midfield": "64",
+      "defense": "62",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "112552.png"
+    },
+    {
+      "name": "Örebro SK",
+      "league": "Allsvenskan",
+      "country": "Sweden",
+      "attack": "63",
+      "midfield": "64",
+      "defense": "62",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "705.png"
+    },
+    {
+      "name": "Vegalta Sendai",
+      "league": "Japan J1 League (1)",
+      "country": "Japan",
+      "attack": "63",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "112836.png"
+    },
+    {
+      "name": "Dundee FC",
+      "league": "Scottish Prem",
+      "country": "Scotland",
+      "attack": "63",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "180.png"
+    },
+    {
+      "name": "Lincoln City",
+      "league": "Football League 2",
+      "country": "England",
+      "attack": "63",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "149.png"
+    },
+    {
+      "name": "Gillingham",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "63",
+      "midfield": "63",
+      "defense": "62",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "1802.png"
+    },
+    {
+      "name": "Rot-Weiß Erfurt",
+      "league": "Germany 3. Liga (3)",
+      "attack": "63",
+      "midfield": "62",
+      "defense": "64",
+      "overall": "63"
+    },,
+    "rating": "15",
+      "crest_id": "100424.png"
+    {
+      "name": "Fleetwood Town",
+      "league": "Football League 1",
+      "country": "England",
+      "attack": "63",
+      "midfield": "62",
+      "defense": "63",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "112260.png"
+    },
+    {
+      "name": "Wycombe",
+      "league": "Football League 2",
+      "country": "England",
+      "attack": "63",
+      "midfield": "62",
+      "defense": "63",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "1933.png"
+    },
+    {
+      "name": "Al Batin",
+      "league": "ALJ League",
+      "country": "Saudi Arabia",
+      "attack": "63",
+      "midfield": "61",
+      "defense": "62",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "112990.png"
+    },
+    {
+      "name": "Exeter City",
+      "league": "Football League 2",
+      "country": "England",
+      "attack": "62",
+      "midfield": "63",
+      "defense": "63",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "143.png"
+    },
+    {
+      "name": "Colchester",
+      "league": "Football League 2",
+      "country": "England",
+      "attack": "62",
+      "midfield": "62",
+      "defense": "64",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "1935.png"
+    },
+    {
+      "name": "Swindon Town",
+      "league": "Football League 2",
+      "country": "England",
+      "attack": "62",
+      "midfield": "62",
+      "defense": "64",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "1934.png"
+    },
+    {
+      "name": "HJK Helsinki",
+      "league": "Rest of World",
+      "country": "N/A",
+      "attack": "62",
+      "midfield": "60",
+      "defense": "63",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "100325.png"
+    },
+    {
+      "name": "Envigado",
+      "league": "Liga Dimayor",
+      "country": "Colombia",
+      "attack": "61",
+      "midfield": "63",
+      "defense": "64",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "112526.png"
+    },
+    {
+      "name": "Carlisle United",
+      "league": "Football League 2",
+      "country": "England",
+      "attack": "55",
+      "midfield": "63",
+      "defense": "65",
+      "overall": "63",
+      "rating": "15",
+      "crest_id": "1480.png"
+    }
+  ]
+}
