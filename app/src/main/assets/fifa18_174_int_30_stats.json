@@ -1,0 +1,49 @@
+{
+  "crest_base_url": "https://www.fifaindex.com/static/FIFA18/images/crest/256/light/",
+  "teams": [
+    {
+      "name": "Finland",
+      "attack": "71",
+      "midfield": "69",
+      "defense": "66",
+      "overall": "70",
+      "rating": "30",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1334.png"
+    },
+    {
+      "name": "China PR",
+      "attack": "70",
+      "midfield": "70",
+      "defense": "70",
+      "overall": "70",
+      "rating": "30",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1413.png"
+    },
+    {
+      "name": "Bulgaria",
+      "attack": "70",
+      "midfield": "69",
+      "defense": "67",
+      "overall": "70",
+      "rating": "30",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1327.png"
+    },
+    {
+      "name": "Canada",
+      "attack": "70",
+      "midfield": "71",
+      "defense": "66",
+      "overall": "69",
+      "rating": "30",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "111455.png"
+    }
+  ]
+}

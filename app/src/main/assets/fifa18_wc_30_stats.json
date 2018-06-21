@@ -1,0 +1,27 @@
+{
+  "crest_base_url": "https://www.fifaindex.com/static/FIFA18WC/images/crestwc/256/light/",
+  "teams": [
+    {
+      "name": "China PR",
+      "attack": "70",
+      "midfield": "69",
+      "defense": "69",
+      "overall": "69",
+      "rating": "30",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1413.png"
+    },
+    {
+      "name": "Panama",
+      "attack": "68",
+      "midfield": "69",
+      "defense": "68",
+      "overall": "69",
+      "rating": "30",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "111475.png"
+    }
+  ]
+}

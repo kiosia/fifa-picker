@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/wcFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/wcFilterButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/intFilter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/intFilterButton"
+        app:layout_constraintEnd_toStartOf="@+id/regFilter"
+        app:layout_constraintStart_toEndOf="@+id/wcFilter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/regFilter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/regFilterButton"
+        app:layout_constraintEnd_toStartOf="@+id/wmnFilter"
+        app:layout_constraintStart_toEndOf="@+id/intFilter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/wmnFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/wmnFilterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/rerollPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/rerollPlayersButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/rerollTeams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rerollTeamsButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/player1controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:contentDescription="@string/player1Label"
+        app:layout_constraintBottom_toTopOf="@+id/player2controller"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/p1" />
+
+    <ImageView
+        android:id="@+id/player2controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:contentDescription="@string/player2Label"
+        app:layout_constraintBottom_toTopOf="@+id/rerollPlayers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/p2" />
+
+    <ImageView
+        android:id="@+id/player3controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="@string/player3Label"
+        app:layout_constraintBottom_toTopOf="@+id/player4controller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/p3" />
+
+    <ImageView
+        android:id="@+id/player4controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="@string/player4Label"
+        app:layout_constraintBottom_toTopOf="@+id/rerollTeams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/p4" />
+
+    <TextView
+        android:id="@+id/vsLabel"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="@string/vsLabel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/player4controller"
+        app:layout_constraintStart_toEndOf="@+id/player2controller" />
+
+    <ImageView
+        android:id="@+id/homeTeamBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/wc_iceland_label"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wcFilter"
+        app:srcCompat="@drawable/wc_iceland" />
+
+    <ImageView
+        android:id="@+id/awayTeamBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/wc_peru_label"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wmnFilter"
+        app:srcCompat="@drawable/wc_peru" />
+
+    <TextView
+        android:id="@+id/homeTeamNameLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/homeTeamNameLabel"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamBadge"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamBadge" />
+
+    <TextView
+        android:id="@+id/homeTeamAttackLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/homeTeamAttackLabel"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamNameLabel" />
+
+    <TextView
+        android:id="@+id/homeTeamMidfieldLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/homeTeamMidfieldLabel"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamAttackLabel"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamAttackLabel" />
+
+    <TextView
+        android:id="@+id/homeTeamDefenseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/homeTeamDefenseLabel"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamMidfieldLabel"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamMidfieldLabel" />
+
+    <TextView
+        android:id="@+id/homeTeamOverallLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/homeTeamOverall"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamDefenseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamDefenseLabel" />
+
+    <TextView
+        android:id="@+id/homeTeamLeagueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxWidth="120dp"
+        android:contentDescription="@string/homeTeamLeague"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamOverallLabel"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamOverallLabel" />
+
+    <TextView
+        android:id="@+id/homeTeamCountryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/homeTeamCountry"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamLeagueLabel"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamLeagueLabel" />
+
+    <TextView
+        android:id="@+id/awayTeamNameLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/awayTeamBadge"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamBadge" />
+
+    <TextView
+        android:id="@+id/awayTeamAttackLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/awayTeamAttackLabel"
+        app:layout_constraintEnd_toEndOf="@+id/awayTeamNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamNameLabel" />
+
+    <TextView
+        android:id="@+id/awayTeamMidfieldLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/awayTeamMidfieldLabel"
+        app:layout_constraintEnd_toEndOf="@+id/awayTeamAttackLabel"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamAttackLabel" />
+
+    <TextView
+        android:id="@+id/awayTeamDefenseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/awayTeamDefenseLabel"
+        app:layout_constraintEnd_toEndOf="@+id/awayTeamMidfieldLabel"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamMidfieldLabel" />
+
+    <TextView
+        android:id="@+id/awayTeamOverallLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/awayTeamOverall"
+        app:layout_constraintEnd_toEndOf="@+id/awayTeamDefenseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamDefenseLabel" />
+
+    <TextView
+        android:id="@+id/awayTeamLeagueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxWidth="120dp"
+        android:contentDescription="@string/awayTeamLeague"
+        app:layout_constraintEnd_toEndOf="@+id/awayTeamOverallLabel"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamOverallLabel" />
+
+    <TextView
+        android:id="@+id/awayTeamCountryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/awayTeamCountry"
+        app:layout_constraintEnd_toEndOf="@+id/awayTeamLeagueLabel"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamLeagueLabel" />
+
+    <TextView
+        android:id="@+id/gameRatingLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/gameRating"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/awayTeamBadge"
+        app:layout_constraintStart_toEndOf="@+id/homeTeamBadge"
+        app:layout_constraintTop_toBottomOf="@+id/intFilter" />
+
+    <TextView
+        android:id="@+id/teamsTypeLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/teamsTypeLabel"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/awayTeamBadge"
+        app:layout_constraintStart_toEndOf="@+id/homeTeamBadge"
+        app:layout_constraintTop_toBottomOf="@+id/gameRatingLabel" />
+
+</android.support.constraint.ConstraintLayout>

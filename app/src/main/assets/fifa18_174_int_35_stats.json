@@ -1,0 +1,192 @@
+{
+  "crest_base_url": "https://www.fifaindex.com/static/FIFA18/images/crest/256/light/",
+  "teams": [
+    {
+      "name": "Wales",
+      "attack": "82",
+      "midfield": "71",
+      "defense": "77",
+      "overall": "74",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1367.png"
+    },
+    {
+      "name": "United States",
+      "attack": "75",
+      "midfield": "74",
+      "defense": "74",
+      "overall": "74",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1387.png"
+    },
+    {
+      "name": "Scotland",
+      "attack": "75",
+      "midfield": "74",
+      "defense": "74",
+      "overall": "74",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1359.png"
+    },
+    {
+      "name": "Paraguay",
+      "attack": "75",
+      "midfield": "74",
+      "defense": "73",
+      "overall": "74",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1375.png"
+    },
+    {
+      "name": "Norway",
+      "attack": "74",
+      "midfield": "74",
+      "defense": "73",
+      "overall": "74",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1352.png"
+    },
+    {
+      "name": "Venezuela",
+      "attack": "77",
+      "midfield": "72",
+      "defense": "70",
+      "overall": "73",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "111487.png"
+    },
+    {
+      "name": "Saudi Arabia",
+      "attack": "73",
+      "midfield": "73",
+      "defense": "73",
+      "overall": "73",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "111114.png"
+    },
+    {
+      "name": "Australia",
+      "attack": "69",
+      "midfield": "73",
+      "defense": "71",
+      "overall": "73",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1415.png"
+    },
+    {
+      "name": "Cameroon",
+      "attack": "77",
+      "midfield": "74",
+      "defense": "69",
+      "overall": "72",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1395.png"
+    },
+    {
+      "name": "Egypt",
+      "attack": "74",
+      "midfield": "72",
+      "defense": "71",
+      "overall": "72",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "111130.png"
+    },
+    {
+      "name": "Iceland",
+      "attack": "73",
+      "midfield": "74",
+      "defense": "69",
+      "overall": "72",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1341.png"
+    },
+    {
+      "name": "Peru",
+      "attack": "73",
+      "midfield": "72",
+      "defense": "71",
+      "overall": "72",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "111108.png"
+    },
+    {
+      "name": "Romania",
+      "attack": "72",
+      "midfield": "72",
+      "defense": "70",
+      "overall": "72",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1356.png"
+    },
+    {
+      "name": "Ecuador",
+      "attack": "68",
+      "midfield": "71",
+      "defense": "72",
+      "overall": "72",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "111465.png"
+    },
+    {
+      "name": "Hungary",
+      "attack": "73",
+      "midfield": "69",
+      "defense": "71",
+      "overall": "71",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1886.png"
+    },
+    {
+      "name": "South Africa",
+      "attack": "72",
+      "midfield": "70",
+      "defense": "70",
+      "overall": "71",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "111099.png"
+    },
+    {
+      "name": "Northern Ireland",
+      "attack": "71",
+      "midfield": "71",
+      "defense": "71",
+      "overall": "71",
+      "rating": "35",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "110081.png"
+    }
+  ]
+}

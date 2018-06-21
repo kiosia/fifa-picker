@@ -1,0 +1,159 @@
+{
+  "crest_base_url": "https://www.fifaindex.com/static/FIFA18/images/crest/256/light/",
+  "teams": [
+    {
+      "name": "Poland",
+      "attack": "82",
+      "midfield": "75",
+      "defense": "79",
+      "overall": "78",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1353.png"
+    },
+    {
+      "name": "Russia",
+      "attack": "80",
+      "midfield": "78",
+      "defense": "76",
+      "overall": "78",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1357.png"
+    },
+    {
+      "name": "Mexico",
+      "attack": "79",
+      "midfield": "79",
+      "defense": "76",
+      "overall": "78",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1386.png"
+    },
+    {
+      "name": "Switzerland",
+      "attack": "74",
+      "midfield": "78",
+      "defense": "77",
+      "overall": "78",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1364.png"
+    },
+    {
+      "name": "Austria",
+      "attack": "80",
+      "midfield": "77",
+      "defense": "75",
+      "overall": "77",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1322.png"
+    },
+    {
+      "name": "Chile",
+      "attack": "77",
+      "midfield": "80",
+      "defense": "75",
+      "overall": "77",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "111459.png"
+    },
+    {
+      "name": "Denmark",
+      "attack": "77",
+      "midfield": "77",
+      "defense": "75",
+      "overall": "77",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1331.png"
+    },
+    {
+      "name": "Côte d'Ivoire",
+      "attack": "76",
+      "midfield": "78",
+      "defense": "77",
+      "overall": "77",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "111112.png"
+    },
+    {
+      "name": "Turkey",
+      "attack": "78",
+      "midfield": "77",
+      "defense": "74",
+      "overall": "76",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1365.png"
+    },
+    {
+      "name": "Greece",
+      "attack": "78",
+      "midfield": "74",
+      "defense": "77",
+      "overall": "76",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1338.png"
+    },
+    {
+      "name": "Sweden",
+      "attack": "76",
+      "midfield": "75",
+      "defense": "76",
+      "overall": "76",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1363.png"
+    },
+    {
+      "name": "Ireland",
+      "attack": "75",
+      "midfield": "74",
+      "defense": "75",
+      "overall": "75",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1355.png"
+    },
+    {
+      "name": "Czech Republic",
+      "attack": "75",
+      "midfield": "74",
+      "defense": "73",
+      "overall": "75",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1330.png"
+    },
+    {
+      "name": "Slovenia",
+      "attack": "72",
+      "midfield": "76",
+      "defense": "72",
+      "overall": "75",
+      "rating": "40",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "1361.png"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "crest_base_url": "https://www.fifaindex.com/static/FIFA18/images/crest/256/light/",
+  "teams": [
+    {
+      "name": "United States",
+      "attack": "82",
+      "midfield": "81",
+      "defense": "80",
+      "overall": "81",
+      "rating": "45",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "113009.png"
+    },
+    {
+      "name": "Germany",
+      "attack": "81",
+      "midfield": "81",
+      "defense": "79",
+      "overall": "80",
+      "rating": "45",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "113004.png"
+    },
+    {
+      "name": "Holland Women",
+      "attack": "80",
+      "midfield": "80",
+      "defense": "76",
+      "overall": "79",
+      "rating": "45",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "113011.png"
+    },
+    {
+      "name": "England",
+      "attack": "79",
+      "midfield": "79",
+      "defense": "79",
+      "overall": "79",
+      "rating": "45",
+      "league": "N/A",
+      "country": "N/A",
+      "crest_id": "113002.png"
+    }
+  ]
+}
