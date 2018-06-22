@@ -3,12 +3,10 @@
     <string name="rerollPlayersButton">Reroll Controllers</string>
     <string name="rerollTeamsButton">Reroll Teams</string>
     <string name="wcFilterButton">World Cup</string>
-    <string name="intFilterButton">Nations</string>
-    <string name="wmnFilterButton">Women</string>
+    <string name="intFilterButton">Int</string>
+    <string name="wmnFilterButton">Wmn</string>
     <string name="vsLabel">X</string>
-    <string name="wc_iceland_label">Iceland</string>
-    <string name="wc_peru_label">Peru</string>
-    <string name="regFilterButton">Regular</string>
+    <string name="regFilterButton">Reg</string>
     <string name="player1Label">Player 1</string>
     <string name="player2Label">Player 2</string>
     <string name="player3Label">Player 3</string>
@@ -27,12 +25,9 @@
     <string name="awayTeamOverall">Away Team Overall Rating</string>
     <string name="awayTeamLeague">Away Team League</string>
     <string name="awayTeamCountry">Away Team Country of Origin</string>
-    <string name="attackLabel">Attack:</string>
-    <string name="midfieldLabel">Midfield:</string>
-    <string name="defenseLabel">Defense:</string>
-    <string name="overallLabel">Overall:</string>
-    <string name="leagueLabel">League:</string>
-    <string name="countryLabel">Country:</string>
-    <string name="gameRating">Game Rating</string>
-    <string name="teamsTypeLabel">Type of the Teams</string>
+    <string name="attackLabel">ATT</string>
+    <string name="midfieldLabel">MID</string>
+    <string name="defenseLabel">DEF</string>
+    <string name="matchRating">Match Rating</string>
+    <string name="matchTypeLabel">Match Type</string>
 </resources>

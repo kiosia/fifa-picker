@@ -53,7 +53,6 @@ public class TeamView extends LinearLayout {
         teamAttackLabel = findViewById(R.id.teamAttackLabel);
         teamMidfieldLabel = findViewById(R.id.teamMidfieldLabel);
         teamDefenseLabel = findViewById(R.id.teamDefenseLabel);
-        teamOverallLabel = findViewById(R.id.teamOverallLabel);
         teamLeagueLabel = findViewById(R.id.teamLeagueLabel);
         teamCountryLabel = findViewById(R.id.teamCountryLabel);
     }
@@ -72,21 +71,20 @@ public class TeamView extends LinearLayout {
         }
 
         teamNameLabel.setText(teamData.getName());
-        teamAttackLabel.setText(String.format("%s%s", getContext().getString(R.string.attackLabel), teamData.getAttack()));
-        teamMidfieldLabel.setText(String.format("%s%s", getContext().getString(R.string.midfieldLabel), teamData.getMidfield()));
-        teamDefenseLabel.setText(String.format("%s%s", getContext().getString(R.string.defenseLabel), teamData.getDefense()));
-        teamOverallLabel.setText(String.format("%s%s", getContext().getString(R.string.overallLabel), teamData.getOverall()));
+        teamAttackLabel.setText(String.format("%s %s", getContext().getString(R.string.attackLabel), teamData.getAttack()));
+        teamMidfieldLabel.setText(String.format("%s %s", getContext().getString(R.string.midfieldLabel), teamData.getMidfield()));
+        teamDefenseLabel.setText(String.format("%s %s", getContext().getString(R.string.defenseLabel), teamData.getDefense()));
         if ("N/A".equals(teamData.getLeague())) {
             teamLeagueLabel.setVisibility(View.INVISIBLE);
         } else {
             teamLeagueLabel.setVisibility(View.VISIBLE);
-            teamLeagueLabel.setText(String.format("%s%s", getContext().getString(R.string.leagueLabel), teamData.getLeague()));
+            teamLeagueLabel.setText(String.format("%s", teamData.getLeague()));
         }
         if ("N/A".equals(teamData.getCountry())) {
             teamCountryLabel.setVisibility(View.INVISIBLE);
         } else {
             teamCountryLabel.setVisibility(View.VISIBLE);
-            teamCountryLabel.setText(String.format("%s%s", getContext().getString(R.string.countryLabel), teamData.getCountry()));
+            teamCountryLabel.setText(String.format("%s", teamData.getCountry()));
         }
     }
 }

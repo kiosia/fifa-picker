@@ -8,52 +8,65 @@
 
     <ImageView
         android:id="@+id/teamBadge"
-        android:layout_width="50dp"
+        android:layout_width="140dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/wc_iceland" />
+        android:layout_gravity="center_horizontal"
+        android:baselineAlignBottom="true"
+        app:srcCompat="@drawable/reg_omiya_ardija" />
 
     <TextView
         android:id="@+id/teamNameLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        tools:text="Iceland" />
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:maxWidth="200dp"
+        tools:text="Omiyya Ardija" />
 
     <TextView
         android:id="@+id/teamAttackLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Attack: 75" />
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:maxWidth="200dp"
+        tools:text="ATT 75" />
 
     <TextView
         android:id="@+id/teamMidfieldLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Midfield: 74" />
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:maxWidth="200dp"
+        tools:text="MID 74" />
 
     <TextView
         android:id="@+id/teamDefenseLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Defense: 74" />
-
-    <TextView
-        android:id="@+id/teamOverallLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Overall: 74" />
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:maxWidth="200dp"
+        tools:text="DEF 74" />
 
     <TextView
         android:id="@+id/teamLeagueLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxWidth="120dp"
-        tools:text="League: Japan J1 League (1)" />
+        android:layout_marginTop="8dp"
+        android:autoText="false"
+        android:gravity="center_horizontal"
+        android:maxWidth="200dp"
+        tools:text="Japan J1 League (1)" />
 
     <TextView
         android:id="@+id/teamCountryLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:maxWidth="200dp"
         tools:text="Japan" />
 
 </LinearLayout>

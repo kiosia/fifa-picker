@@ -132,10 +132,46 @@ public class MainActivity extends AppCompatActivity {
         Team awayTeam = pickedTeams.get(1);
         setAwayTeamLabels(awayTeam, rngType);
 
-        TextView starsLabel = findViewById(R.id.gameRatingLabel);
+        TextView flavorLabel = findViewById(R.id.flavorText);
+        flavorLabel.setText("");
+        if (("Real Madrid".equals(homeTeam.getName())) || ("Real Madrid".equals(awayTeam.getName()))) {
+            flavorLabel.setText(":leo_intensifies: ROBOZAUMMMMM :leo_intensifies:");
+        } else if ((homeTeam.getName() == "Mexico") && (awayTeam.getName() == "Peru")) {
+            // this will never happen :(
+            flavorLabel.setText("ESPECIAL 5ª SÉRIE");
+        } else if ((homeTeam.getName() == "Peru") && (awayTeam.getName() == "Mexico")) {
+            // this will never happen :(
+            flavorLabel.setText("Foi por pouco...");
+        } else if (rngStars == 0) {
+            flavorLabel.setText("ONE STAR OPEN!!!!!!");
+        } else if (("New Zealand".equals(homeTeam.getName())) && ("Canada".equals(awayTeam.getName()))) {
+            flavorLabel.setText("sdds timoteo e junim");
+        } else if (("Canada".equals(homeTeam.getName())) && ("New Zealand".equals(awayTeam.getName()))) {
+            flavorLabel.setText("sdds junim e timoteo");
+        } else if (("New Zealand".equals(homeTeam.getName())) || ("New Zealand".equals(awayTeam.getName()))) {
+            flavorLabel.setText("sdds timoteo");
+        } else if (("Canada".equals(homeTeam.getName())) || ("Canada".equals(awayTeam.getName()))) {
+            flavorLabel.setText("sdds junim");
+        } else if (("Chelsea".equals(homeTeam.getName())) || ("Chelsea".equals(awayTeam.getName()))) {
+            flavorLabel.setText(":gil_rage:");
+        } else if (("Barclays PL".equals(homeTeam.getLeague())) || ("Barclays PL".equals(awayTeam.getLeague()))) {
+            flavorLabel.setText(":gil_speechless: PL overrated. :gil_speechless:");
+        } else if (("Portugal".equals(homeTeam.getName())) || ("Portugal".equals(awayTeam.getName()))) {
+            flavorLabel.setText(":leo_intensifies: ROBOZAAAAAAAUM! :leo_intensifies:");
+        } else if (("Vitória".equals(homeTeam.getName())) || ("Vitória".equals(awayTeam.getName()))) {
+            flavorLabel.setText("Perdi...");
+        } else if (("Korea Republic".equals(homeTeam.getName())) || ("Korea Republic".equals(awayTeam.getName()))) {
+            flavorLabel.setText("CAN YOU STILL FEEL THE POWER OF THE DONG?");
+        } else if (("Ponte Preta".equals(homeTeam.getName())) || ("Ponte Preta".equals(awayTeam.getName()))) {
+            flavorLabel.setText("ÉÉÉÉÉééééÉÈÈ`´e´´eééeééeéÉÉDSOOOOON BAAAAAASTOS, entende?");
+        } else if (("Japan".equals(homeTeam.getCountry())) || ("Japan".equals(awayTeam.getCountry()))) {
+            flavorLabel.setText("NANI!?");
+        }
+
+        TextView starsLabel = findViewById(R.id.matchRatingLabel);
         starsLabel.setText(STARS[rngStars]);
 
-        TextView matchType = findViewById(R.id.teamsTypeLabel);
+        TextView matchType = findViewById(R.id.matchTypeLabel);
         matchType.setText(TYPES[rngType]);
     }
 
