@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/teamBadge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/wc_iceland" />
+
+    <TextView
+        android:id="@+id/teamNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="Iceland" />
+
+    <TextView
+        android:id="@+id/teamAttackLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Attack: 75" />
+
+    <TextView
+        android:id="@+id/teamMidfieldLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Midfield: 74" />
+
+    <TextView
+        android:id="@+id/teamDefenseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Defense: 74" />
+
+    <TextView
+        android:id="@+id/teamOverallLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Overall: 74" />
+
+    <TextView
+        android:id="@+id/teamLeagueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="120dp"
+        tools:text="League: Japan J1 League (1)" />
+
+    <TextView
+        android:id="@+id/teamCountryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Japan" />
+
+</LinearLayout>
