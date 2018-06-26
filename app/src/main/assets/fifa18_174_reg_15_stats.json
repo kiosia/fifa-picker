@@ -36,7 +36,7 @@
     },
     {
       "name": "Iwata",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "67",
       "midfield": "63",
@@ -47,7 +47,8 @@
     },
     {
       "name": "Fortuna Köln",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "66",
       "midfield": "64",
       "defense": "63",
@@ -79,7 +80,8 @@
     },
     {
       "name": "Chemnitzer FC",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "66",
       "midfield": "63",
       "defense": "63",
@@ -232,7 +234,8 @@
     },
     {
       "name": "Hallescher FC",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "64",
       "midfield": "64",
       "defense": "63",
@@ -253,7 +256,8 @@
     },
     {
       "name": "SV Meppen",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "64",
       "midfield": "63",
       "defense": "64",
@@ -274,7 +278,8 @@
     },
     {
       "name": "Sportfreunde Lotte",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "63",
       "midfield": "65",
       "defense": "64",
@@ -526,7 +531,8 @@
     },
     {
       "name": "Carl Zeiss Jena",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "63",
       "midfield": "64",
       "defense": "63",
@@ -558,7 +564,7 @@
     },
     {
       "name": "Vegalta Sendai",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "63",
       "midfield": "63",
@@ -602,7 +608,8 @@
     },
     {
       "name": "Rot-Weiß Erfurt",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "63",
       "midfield": "62",
       "defense": "64",

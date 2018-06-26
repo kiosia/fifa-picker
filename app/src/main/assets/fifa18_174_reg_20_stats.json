@@ -14,7 +14,7 @@
     },
     {
       "name": "Yokohama F·Marinos",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "70",
       "midfield": "67",
@@ -102,7 +102,7 @@
     },
     {
       "name": "Shimizu",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "68",
       "midfield": "63",
@@ -135,7 +135,7 @@
     },
     {
       "name": "Sanfrecce Hiroshima",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "67",
       "midfield": "67",
@@ -157,7 +157,8 @@
     },
     {
       "name": "1. FC Magdeburg",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "67",
       "midfield": "66",
       "defense": "67",
@@ -332,7 +333,8 @@
     },
     {
       "name": "SV Wehen",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "66",
       "midfield": "65",
       "defense": "67",
@@ -342,7 +344,8 @@
     },
     {
       "name": "Hansa Rostock",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "66",
       "midfield": "64",
       "defense": "66",
@@ -396,7 +399,7 @@
     },
     {
       "name": "Sagan Tosu",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "65",
       "midfield": "66",
@@ -451,7 +454,8 @@
     },
     {
       "name": "Würzburger Kickers",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "64",
       "midfield": "66",
       "defense": "66",
@@ -593,7 +597,8 @@
     },
     {
       "name": "SC Paderborn",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "66",
       "midfield": "66",
       "defense": "65",
@@ -691,7 +696,8 @@
     },
     {
       "name": "Preußen Münster",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "66",
       "midfield": "64",
       "defense": "64",
@@ -723,7 +729,7 @@
     },
     {
       "name": "Hokkaido Consadole Sapporo",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "66",
       "midfield": "59",
@@ -778,7 +784,8 @@
     },
     {
       "name": "SG Sonnenhof Großaspach",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "65",
       "midfield": "65",
       "defense": "65",
@@ -821,7 +828,8 @@
     },
     {
       "name": "VfL Osnabrück",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "65",
       "midfield": "64",
       "defense": "64",
@@ -875,7 +883,8 @@
     },
     {
       "name": "FSV Zwickau",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "64",
       "midfield": "65",
       "defense": "65",
@@ -929,7 +938,8 @@
     },
     {
       "name": "VfR Aalen",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "63",
       "midfield": "66",
       "defense": "65",

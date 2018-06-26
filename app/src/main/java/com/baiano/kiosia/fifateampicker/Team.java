@@ -82,4 +82,9 @@ class Team {
     public void setCrestId(String crestId) {
         this.crestId = crestId;
     }
+
+    @Override
+    public String toString() {
+        return "{teamName:"+getName()+", teamRating:"+getRating()+"}";
+    }
 }

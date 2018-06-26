@@ -12,7 +12,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:baselineAlignBottom="true"
-        app:srcCompat="@drawable/reg_omiya_ardija" />
+        tools:srcCompat="@drawable/shuffle" />
 
     <TextView
         android:id="@+id/teamNameLabel"
