@@ -95,8 +95,10 @@ public class MainActivity extends AppCompatActivity {
 
         easterEggs(rngStars, homeTeam, awayTeam);
 
-        TextView starsLabel = findViewById(R.id.matchRatingLabel);
-        starsLabel.setText(STARS[rngStars]);
+        ImageView starsValue = findViewById(R.id.matchRatingValue);
+
+        int[] starsImages = {R.drawable.stars05, R.drawable.stars10, R.drawable.stars15, R.drawable.stars20, R.drawable.stars25, R.drawable.stars30, R.drawable.stars35, R.drawable.stars40, R.drawable.stars45, R.drawable.stars50};
+        starsValue.setImageResource(starsImages[rngStars]);
 
         TextView matchType = findViewById(R.id.matchTypeLabel);
         matchType.setText(TYPES[rngType]);
