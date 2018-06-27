@@ -12,7 +12,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:baselineAlignBottom="true"
-        app:srcCompat="@drawable/reg_omiya_ardija" />
+        tools:srcCompat="@drawable/shuffle" />
 
     <TextView
         android:id="@+id/teamNameLabel"
@@ -58,7 +58,7 @@
         android:autoText="false"
         android:gravity="center_horizontal"
         android:maxWidth="200dp"
-        tools:text="Japan J1 League (1)" />
+        tools:text="Meiji Yasuda J1" />
 
     <TextView
         android:id="@+id/teamCountryLabel"

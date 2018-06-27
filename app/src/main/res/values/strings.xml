@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fifa Team Picker</string>
+    <string name="app_name">Team Picker</string>
     <string name="rerollPlayersButton">Reroll Controllers</string>
     <string name="rerollTeamsButton">Reroll Teams</string>
     <string name="wcFilterButton">World Cup</string>
@@ -30,4 +30,9 @@
     <string name="defenseLabel">DEF</string>
     <string name="matchRating">Match Rating</string>
     <string name="matchTypeLabel">Match Type</string>
+    <string name="starsFilter">Filter by Stars</string>
+    <string name="typeFilter">Filter by Type</string>
+    <string name="options">Options</string>
+    <string name="about">About</string>
+    <string name="clearFilters">Clear Filters</string>
 </resources>

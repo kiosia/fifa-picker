@@ -729,7 +729,7 @@
     },
     {
       "name": "Kashiwa Reysol",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "69",
       "midfield": "67",
@@ -773,7 +773,7 @@
     },
     {
       "name": "Gamba Osaka",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "69",
       "midfield": "65",
@@ -894,7 +894,7 @@
     },
     {
       "name": "Vissel Kobe",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "68",
       "midfield": "65",
@@ -982,7 +982,7 @@
     },
     {
       "name": "F.C. Tokyo",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "67",
       "midfield": "67",
@@ -1048,7 +1048,8 @@
     },
     {
       "name": "Karlsruher SC",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "67",
       "midfield": "66",
       "defense": "67",

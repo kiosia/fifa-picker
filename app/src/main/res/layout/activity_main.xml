@@ -24,78 +24,19 @@
         app:layout_constraintTop_toTopOf="@+id/homeTeam"
         tools:text="Match Rating" />
 
-    <Button
-        android:id="@+id/wcFilter"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/wcFilterButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="WORLD CUP" />
-
-    <Button
-        android:id="@+id/intFilter"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/intFilterButton"
-        app:layout_constraintStart_toEndOf="@+id/wcFilter"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="INT" />
-
-    <Button
-        android:id="@+id/regFilter"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/regFilterButton"
-        app:layout_constraintStart_toEndOf="@+id/intFilter"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="REG" />
-
-    <Button
-        android:id="@+id/wmnFilter"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/wmnFilterButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/regFilter"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="WMN" />
-
-    <Button
-        android:id="@+id/rerollPlayers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/rerollPlayersButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/rerollTeams"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+    <ImageView
+        android:id="@+id/matchRatingValue"
+        android:layout_width="159dp"
+        android:layout_height="20dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/rerollTeamsButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchRatingTitle"
+        app:srcCompat="@drawable/stars50" />
 
     <ImageView
         android:id="@+id/player1controller"
@@ -167,7 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/intFilter" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.baiano.kiosia.fifateampicker.TeamView
         android:id="@+id/awayTeam"
@@ -175,23 +116,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/homeTeam" />
-
-    <TextView
-        android:id="@+id/matchRatingLabel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/matchRating"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchRatingTitle"
-        tools:text="Three and a Half Stars" />
 
     <TextView
         android:id="@+id/matchTypeLabel"
@@ -238,11 +162,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:gravity="center_vertical|center_horizontal"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/rerollTeams"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player4controller"
-        app:layout_constraintVertical_bias="0.489" />
+        tools:text="NANI?!" />
 
 </android.support.constraint.ConstraintLayout>

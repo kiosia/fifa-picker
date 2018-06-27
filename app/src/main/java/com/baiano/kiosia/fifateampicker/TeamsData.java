@@ -85,17 +85,19 @@ class TeamsData {
             JSONArray m_jArry = obj.getJSONArray("teams");
 
             for (int i = 0; i < m_jArry.length(); i++) {
-                JSONObject jo_inside = m_jArry.getJSONObject(i);
+                JSONObject jsonObject = m_jArry.getJSONObject(i);
                 Team team = new Team();
-                team.setName(jo_inside.getString("name"));
-                team.setAttack(jo_inside.getString("attack"));
-                team.setMidfield(jo_inside.getString("midfield"));
-                team.setDefense(jo_inside.getString("defense"));
-                team.setOverall(jo_inside.getString("overall"));
-                team.setRating(jo_inside.getString("rating"));
-                team.setLeague(jo_inside.getString("league"));
-                team.setCountry(jo_inside.getString("country"));
-                team.setCrestId(jo_inside.getString("crest_id"));
+                team.setName(jsonObject.getString("name"));
+                team.setAttack(jsonObject.getString("attack"));
+                team.setMidfield(jsonObject.getString("midfield"));
+                team.setDefense(jsonObject.getString("defense"));
+                team.setOverall(jsonObject.getString("overall"));
+                team.setRating(jsonObject.getString("rating"));
+                if (teamType != "fifa18_174_reg") {
+                    team.setLeague(jsonObject.getString("league"));
+                    team.setCountry(jsonObject.getString("country"));
+                }
+                team.setCrestId(jsonObject.getString("crest_id"));
 
                 teams.add(team);
             }

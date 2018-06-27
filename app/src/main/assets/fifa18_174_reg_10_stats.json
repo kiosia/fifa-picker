@@ -3,7 +3,7 @@
   "teams": [
     {
       "name": "Ventforet Kofu",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "66",
       "midfield": "61",
@@ -25,7 +25,7 @@
     },
     {
       "name": "Omiya Ardija",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "63",
       "midfield": "63",
@@ -47,7 +47,8 @@
     },
     {
       "name": "Werder Bremen II",
-      "league": "Germany 3. Liga (3)",
+      "league": "3. Liga",
+      "country": "Germany",
       "attack": "63",
       "midfield": "62",
       "defense": "61",
@@ -310,7 +311,7 @@
     },
     {
       "name": "Albirex Niigata",
-      "league": "Japan J1 League (1)",
+      "league": "Meiji Yasuda J1",
       "country": "Japan",
       "attack": "62",
       "midfield": "58",
