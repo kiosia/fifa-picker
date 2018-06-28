@@ -1,0 +1,102 @@
+{
+  "easterEggs" : [
+    {
+      "conditionType" : "teamName",
+      "operator": "or",
+      "factor1" : "Real Madrid",
+      "factor2" : "Real Madrid",
+      "result" : ":leo_intensifies: ROBOZAUMMMMM"
+    },
+    {
+      "conditionType" : "teamName",
+      "operator" : "and",
+      "factor1" : "Mexico",
+      "factor2" : "Peru",
+      "result" : "ESPECIAL 5ª SÉRIE"
+    },
+    {
+      "conditionType" : "teamName",
+      "operator" : "and",
+      "factor1" : "Peru",
+      "factor2" : "Mexico",
+      "result" : "Foi por pouco..."
+    },
+    {
+      "conditionType" : "teamRating",
+      "operator" : "or",
+      "factor1" : "05",
+      "factor2" : "05",
+      "result" : "ONE STAR OPEN!!!!!!"
+    },
+    {
+      "conditionType" : "teamRating",
+      "operator" : "or",
+      "factor1" : "50",
+      "factor2" : "50",
+      "result" : "JUEGO DE CALIDAD"
+    },
+    {
+      "conditionType" : "teamName",
+      "operator" : "or",
+      "factor1" : "New Zealand",
+      "factor2" : "New Zealand",
+      "result" : "sdds timoteo"
+    },
+    {
+      "conditionType" : "teamName",
+      "operator" : "or",
+      "factor1" : "Canada",
+      "factor2" : "Canada",
+      "result" : "sdds junim"
+    },
+    {
+      "conditionType" : "teamName",
+      "operator" : "or",
+      "factor1" : "Chelsea",
+      "factor2" : "Chelsea",
+      "result" : ":gil_rage:"
+    },
+    {
+      "conditionType" : "teamLeague",
+      "operator" : "or",
+      "factor1" : "Barclays PL",
+      "factor2" : "Barclays PL",
+      "result" : ":gil_speechless: PL overrated."
+    },
+    {
+      "conditionType" : "teamName",
+      "operator" : "or",
+      "factor1" : "Portugal",
+      "factor2" : "Portugal",
+      "result" : ":leo_intensifies: ROBOZAAAAAAAUM!"
+    },
+    {
+      "conditionType" : "teamName",
+      "operator" : "or",
+      "factor1" : "Vitória",
+      "factor2" : "Vitória",
+      "result" : "Perdi..."
+    },
+    {
+      "conditionType" : "teamName",
+      "operator" : "or",
+      "factor1" : "Korea Republic",
+      "factor2" : "Korea Republic",
+      "result" : "CAN YOU STILL FEEL THE POWER OF THE DONG?"
+    },
+    {
+      "conditionType" : "teamName",
+      "operator" : "or",
+      "factor1" : "Ponte Preta",
+      "factor2" : "Ponte Preta",
+      "result" : "ÉÉÉééÉÈeeéÉÉDSOOON BAAASTOS, entende?"
+    },
+    {
+      "conditionType" : "teamName",
+      "operator" : "or",
+      "factor1" : "Japan",
+      "factor2" : "Japan",
+      "result" : "NANI!?"
+    }
+  ]
+}

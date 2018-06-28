@@ -8,7 +8,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -18,7 +17,7 @@ class TeamsData {
     private final TeamsByRating regularTeams;
     private final TeamsByRating worldCupTeams;
 
-    public TeamsData(Context context) {
+    TeamsData(Context context) {
         String FIFA_GAME = "fifa18_";
         String FIFA_VERSION = "174_";
         String INTERNATIONAL = "int";
@@ -30,22 +29,6 @@ class TeamsData {
         this.internationalWomenTeams = loadTeamsByType(context, FIFA_GAME+FIFA_VERSION+INTERNATIONAL_WOMEN);
         this.regularTeams = loadTeamsByType(context, FIFA_GAME+FIFA_VERSION+REGULAR);
         this.worldCupTeams = loadTeamsByType(context, FIFA_GAME+WORLD_CUP);
-    }
-
-    public TeamsByRating getInternationalTeams() {
-        return internationalTeams;
-    };
-
-    public TeamsByRating getInternationalWomenTeams() {
-        return internationalWomenTeams;
-    };
-
-    public TeamsByRating getRegularTeams() {
-        return regularTeams;
-    }
-
-    public TeamsByRating getWorldCupTeams() {
-        return worldCupTeams;
     }
 
     private TeamsByRating loadTeamsByType(Context context, String type) {
@@ -82,10 +65,10 @@ class TeamsData {
         }
         try {
             JSONObject obj = new JSONObject(json);
-            JSONArray m_jArry = obj.getJSONArray("teams");
+            JSONArray jsonArray = obj.getJSONArray("teams");
 
-            for (int i = 0; i < m_jArry.length(); i++) {
-                JSONObject jsonObject = m_jArry.getJSONObject(i);
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Team team = new Team();
                 team.setName(jsonObject.getString("name"));
                 team.setAttack(jsonObject.getString("attack"));
@@ -93,12 +76,10 @@ class TeamsData {
                 team.setDefense(jsonObject.getString("defense"));
                 team.setOverall(jsonObject.getString("overall"));
                 team.setRating(jsonObject.getString("rating"));
-                if (teamType != "fifa18_174_reg") {
+                if (!"fifa18_174_reg".equals(teamType)) {
                     team.setLeague(jsonObject.getString("league"));
                     team.setCountry(jsonObject.getString("country"));
                 }
-                team.setCrestId(jsonObject.getString("crest_id"));
-
                 teams.add(team);
             }
         } catch (JSONException ex) {
@@ -110,15 +91,15 @@ class TeamsData {
     public ArrayList<Team> getTwoTeamsByTypeAndRating(int type, int stars) {
         switch (type) {
             case 0 :
-                return getTwoTeamsFrom(getTeamsByStars(getInternationalTeams(), stars));
+                return getTwoTeamsFrom(getTeamsByStars(this.internationalTeams, stars));
             case 1:
-                return getTwoTeamsFrom(getTeamsByStars(getInternationalWomenTeams(), stars));
+                return getTwoTeamsFrom(getTeamsByStars(this.internationalWomenTeams, stars));
             case 2:
-                return getTwoTeamsFrom(getTeamsByStars(getRegularTeams(), stars));
+                return getTwoTeamsFrom(getTeamsByStars(this.regularTeams, stars));
             case 3:
-                return getTwoTeamsFrom(getTeamsByStars(getWorldCupTeams(), stars));
+                return getTwoTeamsFrom(getTeamsByStars(this.worldCupTeams, stars));
             default:
-                return getTwoTeamsFrom(getTeamsByStars(getRegularTeams(), stars));
+                return getTwoTeamsFrom(getTeamsByStars(this.regularTeams, stars));
         }
     }
 

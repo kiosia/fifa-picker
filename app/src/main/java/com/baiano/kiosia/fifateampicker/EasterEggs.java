@@ -1,40 +1,62 @@
 package com.baiano.kiosia.fifateampicker;
 
+import android.content.Context;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+
 class EasterEggs {
-    public static String getString(Team homeTeam, Team awayTeam) {
-        if (("Real Madrid".equals(homeTeam.getName())) || ("Real Madrid".equals(awayTeam.getName()))) {
-            return ":leo_intensifies: ROBOZAUMMMMM :leo_intensifies:";
-        } else if ((homeTeam.getName() == "Mexico") && (awayTeam.getName() == "Peru")) {
-            // this will never happen :(
-            return "ESPECIAL 5ª SÉRIE";
-        } else if ((homeTeam.getName() == "Peru") && (awayTeam.getName() == "Mexico")) {
-            // this will never happen :(
-            return "Foi por pouco...";
-        } else if (homeTeam.getRating() == "05") {
-            return "ONE STAR OPEN!!!!!!";
-        } else if (("New Zealand".equals(homeTeam.getName())) && ("Canada".equals(awayTeam.getName()))) {
-            return "sdds timoteo e junim";
-        } else if (("Canada".equals(homeTeam.getName())) && ("New Zealand".equals(awayTeam.getName()))) {
-            return "sdds junim e timoteo";
-        } else if (("New Zealand".equals(homeTeam.getName())) || ("New Zealand".equals(awayTeam.getName()))) {
-            return "sdds timoteo";
-        } else if (("Canada".equals(homeTeam.getName())) || ("Canada".equals(awayTeam.getName()))) {
-            return "sdds junim";
-        } else if (("Chelsea".equals(homeTeam.getName())) || ("Chelsea".equals(awayTeam.getName()))) {
-            return ":gil_rage:";
-        } else if (("Barclays PL".equals(homeTeam.getLeague())) || ("Barclays PL".equals(awayTeam.getLeague()))) {
-            return ":gil_speechless: PL overrated. :gil_speechless:";
-        } else if (("Portugal".equals(homeTeam.getName())) || ("Portugal".equals(awayTeam.getName()))) {
-            return ":leo_intensifies: ROBOZAAAAAAAUM! :leo_intensifies:";
-        } else if (("Vitória".equals(homeTeam.getName())) || ("Vitória".equals(awayTeam.getName()))) {
-            return "Perdi...";
-        } else if (("Korea Republic".equals(homeTeam.getName())) || ("Korea Republic".equals(awayTeam.getName()))) {
-            return "CAN YOU STILL FEEL THE POWER OF THE DONG?";
-        } else if (("Ponte Preta".equals(homeTeam.getName())) || ("Ponte Preta".equals(awayTeam.getName()))) {
-            return "ÉÉÉÉÉééééÉÈÈ`´e´´eééeééeéÉÉDSOOOOON BAAAAAASTOS, entende?";
-        } else if (("Japan".equals(homeTeam.getCountry())) || ("Japan".equals(awayTeam.getCountry()))) {
-            return "NANI!?";
+    private ArrayList<EasterEgg> easterEggs;
+
+    EasterEggs(Context context) {
+        ArrayList<EasterEgg> easterEggs = new ArrayList<>();
+        String filename = "easter_eggs/easter_eggs.json";
+        String json;
+        try {
+            InputStream inputStream = context.getAssets().open(filename);
+            int size = inputStream.available();
+            byte[] buffer = new byte[size];
+            inputStream.read(buffer);
+            inputStream.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            this.easterEggs = null;
+            return;
         }
-        return "";
+        try {
+            JSONObject obj = new JSONObject(json);
+            JSONArray m_jArry = obj.getJSONArray("easterEggs");
+
+            for (int i = 0; i < m_jArry.length(); i++) {
+                JSONObject jsonObject = m_jArry.getJSONObject(i);
+                EasterEgg easterEgg = new EasterEgg();
+                easterEgg.setConditionType(jsonObject.getString("conditionType"));
+                easterEgg.setOperator(jsonObject.getString("operator"));
+                easterEgg.setFactor1(jsonObject.getString("factor1"));
+                easterEgg.setFactor2(jsonObject.getString("factor2"));
+                easterEgg.setResult(jsonObject.getString("result"));
+                easterEggs.add(easterEgg);
+            }
+        } catch (JSONException ex) {
+            ex.printStackTrace();
+        }
+        this.easterEggs = easterEggs;
+    }
+
+    public String execute(Team homeTeam, Team awayTeam) {
+        StringBuilder result = new StringBuilder();
+        for (EasterEgg easterEgg : this.easterEggs) {
+            String aux = easterEgg.execute(homeTeam, awayTeam);
+            if (!"".equals(aux)) {
+                result.append(aux).append('\n');
+            }
+        }
+        return result.toString();
     }
 }

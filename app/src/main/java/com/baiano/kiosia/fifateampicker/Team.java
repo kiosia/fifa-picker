@@ -9,7 +9,6 @@ class Team {
     private String rating;
     private String league;
     private String country;
-    private String crestId;
 
     public String getName() {
         return name;
@@ -43,10 +42,6 @@ class Team {
         return country;
     }
 
-    public String getCrestId() {
-        return crestId;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -77,10 +72,6 @@ class Team {
 
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    public void setCrestId(String crestId) {
-        this.crestId = crestId;
     }
 
     @Override
