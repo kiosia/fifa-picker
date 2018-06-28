@@ -76,10 +76,8 @@ class TeamsData {
                 team.setDefense(jsonObject.getString("defense"));
                 team.setOverall(jsonObject.getString("overall"));
                 team.setRating(jsonObject.getString("rating"));
-                if (!"fifa18_174_reg".equals(teamType)) {
-                    team.setLeague(jsonObject.getString("league"));
-                    team.setCountry(jsonObject.getString("country"));
-                }
+                team.setLeague(jsonObject.getString("league"));
+                team.setCountry(jsonObject.getString("country"));
                 teams.add(team);
             }
         } catch (JSONException ex) {
