@@ -7,8 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String[] TYPES = {"International", "Women", "Regular", "World Cup"};
     private static final String[] TYPES_TAG = {"int", "wmn", "reg", "wc"};
-    private static final String[] STARS = {"Half Star", "One Star", "One and a Half Star", "Two Stars", "Two and a Half Stars", "Three Stars", "Three and a Half Stars", "Four Stars", "Four and a Half Stars", "Five Stars"};
     private static int selectedStars = -1;
     private static int selectedType = -1;
     private TeamsData teams;
+    private EasterEggs easterEggs;
     final Random rng = new Random();
 
     @Override
@@ -37,9 +35,11 @@ public class MainActivity extends AppCompatActivity {
         progress.setCancelable(false);
         progress.show();
 
+        easterEggs = new EasterEggs(getApplicationContext());
         teams = new TeamsData(getApplicationContext());
         rollTeams(teams, selectedType, selectedStars);
         rollPlayers();
+
         progress.dismiss();
     }
 
@@ -87,59 +87,30 @@ public class MainActivity extends AppCompatActivity {
             pickedTeams = teams.getTwoTeamsByTypeAndRating(rngType, rngStars);
         }
 
+        fillLabels(rngType, rngStars, pickedTeams);
+    }
+
+    private void fillLabels(int rngType, int rngStars, ArrayList<Team> pickedTeams) {
         Team homeTeam = pickedTeams.get(0);
         setHomeTeamLabels(homeTeam, rngType);
 
         Team awayTeam = pickedTeams.get(1);
         setAwayTeamLabels(awayTeam, rngType);
 
-        easterEggs(rngStars, homeTeam, awayTeam);
+        fillEasterEggs(homeTeam, awayTeam);
 
         ImageView starsValue = findViewById(R.id.matchRatingValue);
 
-        int[] starsImages = {R.drawable.stars05, R.drawable.stars10, R.drawable.stars15, R.drawable.stars20, R.drawable.stars25, R.drawable.stars30, R.drawable.stars35, R.drawable.stars40, R.drawable.stars45, R.drawable.stars50};
-        starsValue.setImageResource(starsImages[rngStars]);
-
         TextView matchType = findViewById(R.id.matchTypeLabel);
         matchType.setText(TYPES[rngType]);
+
+        int[] starsImages = {R.drawable.stars05, R.drawable.stars10, R.drawable.stars15, R.drawable.stars20, R.drawable.stars25, R.drawable.stars30, R.drawable.stars35, R.drawable.stars40, R.drawable.stars45, R.drawable.stars50};
+        starsValue.setImageResource(starsImages[rngStars]);
     }
 
-    private void easterEggs(int rngStars, Team homeTeam, Team awayTeam) {
+    private void fillEasterEggs(Team homeTeam, Team awayTeam) {
         TextView flavorLabel = findViewById(R.id.flavorText);
-        flavorLabel.setText("");
-        if (("Real Madrid".equals(homeTeam.getName())) || ("Real Madrid".equals(awayTeam.getName()))) {
-            flavorLabel.setText(":leo_intensifies: ROBOZAUMMMMM :leo_intensifies:");
-        } else if ((homeTeam.getName() == "Mexico") && (awayTeam.getName() == "Peru")) {
-            // this will never happen :(
-            flavorLabel.setText("ESPECIAL 5ª SÉRIE");
-        } else if ((homeTeam.getName() == "Peru") && (awayTeam.getName() == "Mexico")) {
-            // this will never happen :(
-            flavorLabel.setText("Foi por pouco...");
-        } else if (rngStars == 0) {
-            flavorLabel.setText("ONE STAR OPEN!!!!!!");
-        } else if (("New Zealand".equals(homeTeam.getName())) && ("Canada".equals(awayTeam.getName()))) {
-            flavorLabel.setText("sdds timoteo e junim");
-        } else if (("Canada".equals(homeTeam.getName())) && ("New Zealand".equals(awayTeam.getName()))) {
-            flavorLabel.setText("sdds junim e timoteo");
-        } else if (("New Zealand".equals(homeTeam.getName())) || ("New Zealand".equals(awayTeam.getName()))) {
-            flavorLabel.setText("sdds timoteo");
-        } else if (("Canada".equals(homeTeam.getName())) || ("Canada".equals(awayTeam.getName()))) {
-            flavorLabel.setText("sdds junim");
-        } else if (("Chelsea".equals(homeTeam.getName())) || ("Chelsea".equals(awayTeam.getName()))) {
-            flavorLabel.setText(":gil_rage:");
-        } else if (("Barclays PL".equals(homeTeam.getLeague())) || ("Barclays PL".equals(awayTeam.getLeague()))) {
-            flavorLabel.setText(":gil_speechless: PL overrated. :gil_speechless:");
-        } else if (("Portugal".equals(homeTeam.getName())) || ("Portugal".equals(awayTeam.getName()))) {
-            flavorLabel.setText(":leo_intensifies: ROBOZAAAAAAAUM! :leo_intensifies:");
-        } else if (("Vitória".equals(homeTeam.getName())) || ("Vitória".equals(awayTeam.getName()))) {
-            flavorLabel.setText("Perdi...");
-        } else if (("Korea Republic".equals(homeTeam.getName())) || ("Korea Republic".equals(awayTeam.getName()))) {
-            flavorLabel.setText("CAN YOU STILL FEEL THE POWER OF THE DONG?");
-        } else if (("Ponte Preta".equals(homeTeam.getName())) || ("Ponte Preta".equals(awayTeam.getName()))) {
-            flavorLabel.setText("ÉÉÉÉÉééééÉÈÈ`´e´´eééeééeéÉÉDSOOOOON BAAAAAASTOS, entende?");
-        } else if (("Japan".equals(homeTeam.getCountry())) || ("Japan".equals(awayTeam.getCountry()))) {
-            flavorLabel.setText("NANI!?");
-        }
+        flavorLabel.setText(easterEggs.execute(homeTeam, awayTeam));
     }
 
     private void setAwayTeamLabels(Team awayTeam, int rngType) {

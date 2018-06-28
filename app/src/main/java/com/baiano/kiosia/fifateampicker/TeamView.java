@@ -2,9 +2,7 @@ package com.baiano.kiosia.fifateampicker;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
-import android.os.Build;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
@@ -21,7 +19,6 @@ public class TeamView extends LinearLayout {
     private TextView teamAttackLabel;
     private TextView teamMidfieldLabel;
     private TextView teamDefenseLabel;
-    private TextView teamOverallLabel;
     private TextView teamLeagueLabel;
     private TextView teamCountryLabel;
 
@@ -37,12 +34,6 @@ public class TeamView extends LinearLayout {
 
     public TeamView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public TeamView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }
 
