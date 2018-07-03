@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.baiano.kiosia.fifateampicker.Model.Team;
+
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -48,12 +50,12 @@ public class TeamView extends LinearLayout {
         teamCountryLabel = findViewById(R.id.teamCountryLabel);
     }
 
-    public void setTeam(Team teamData, String teamType) {
+    public void setTeam(Team teamData) {
         teamBadge.setContentDescription(teamData.getName());
 
         try {
             String formattedName = teamData.getName().toLowerCase().replaceAll("[ ']", "_");
-            String badgeFilename = teamType + "/" + teamType + "_" + formattedName + ".png";
+            String badgeFilename = "badges/" + teamData.getType().toLowerCase() + "_" + formattedName + ".png";
             InputStream badgeInputStream = getContext().getAssets().open(badgeFilename);
             teamBadge.setImageBitmap(BitmapFactory.decodeStream(badgeInputStream));
             badgeInputStream.close();
