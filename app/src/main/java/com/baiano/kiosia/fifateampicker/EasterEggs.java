@@ -2,6 +2,8 @@ package com.baiano.kiosia.fifateampicker;
 
 import android.content.Context;
 
+import com.baiano.kiosia.fifateampicker.Model.Team;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

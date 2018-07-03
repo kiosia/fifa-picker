@@ -1,5 +1,7 @@
 package com.baiano.kiosia.fifateampicker;
 
+import com.baiano.kiosia.fifateampicker.Model.Team;
+
 class EasterEgg {
     private String conditionType;
     private String operator;
