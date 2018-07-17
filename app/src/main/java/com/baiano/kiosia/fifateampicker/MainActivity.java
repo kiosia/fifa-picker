@@ -1,20 +1,21 @@
 package com.baiano.kiosia.fifateampicker;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
+import android.graphics.BitmapFactory;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -31,13 +32,14 @@ public class MainActivity extends AppCompatActivity {
     private ShakeDetector mShakeDetector;
 
     private final String[] RATING = {"5", "10", "15", "20", "25", "30", "35", "40", "45", "50"};
-    private final String[] TYPE = {"INT", "WMN", "REG", "WC"};
-    private static final String[] TYPES = {"International", "Women", "Regular", "World Cup"};
+    private final String[] TYPES_TAGS = {"INT", "WMN", "REG", "WC"};
+    private static final String[] TYPES = {"International", "Women International", "Regular Teams", "World Cup"};
 
     private static int selectedStars = -1;
     private static int selectedType = -1;
     private static int selectedVersion = -1;
-    private EasterEggs easterEggs;
+    private static int[] lastShuffledPlayers = {4, 4, 4, 4};
+    private Flavors flavors;
     final Random rng = new Random();
 
     @Override
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         progress.setMessage("Reticulating splines...");
         progress.setCancelable(false);
         progress.show();
-        easterEggs = new EasterEggs(getApplicationContext());
+        flavors = new Flavors(getApplicationContext());
         rollTeams();
         rollPlayers();
 
@@ -67,22 +69,230 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
+        ImageView teamsShuffleButton = findViewById(R.id.teamsShuffleButton);
+        teamsShuffleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rollTeams();
+            }
+        });
+
+        ImageView controllersShuffleButton = findViewById(R.id.controllersShuffleButton);
+        controllersShuffleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rollPlayers();
+            }
+        });
+
+        final View teamRatingSelector = findViewById(R.id.teamRatingSelector);
+        ImageView ratingImage = findViewById(R.id.star3);
+        ratingImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                teamRatingSelector.setVisibility(View.VISIBLE);
+            }
+        });
+
+        final View teamTypeSelector = findViewById(R.id.teamTypeSelector);
+        ImageView typeBackground = findViewById(R.id.matchTypeBackground);
+        typeBackground.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                teamTypeSelector.setVisibility(View.VISIBLE);
+            }
+        });
+
+        TextView intLabel = teamTypeSelector.findViewById(R.id.intFilterLabel);
+        intLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedType = 0;
+                selectedVersion = -1;
+                teamTypeSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        TextView wmnLabel = teamTypeSelector.findViewById(R.id.wmnFilterLabel);
+        wmnLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedType = 1;
+                selectedVersion = -1;
+                teamTypeSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        TextView regLabel = teamTypeSelector.findViewById(R.id.regFilterLabel);
+        regLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedType = 2;
+                selectedVersion = -1;
+                teamTypeSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        TextView wcLabel = teamTypeSelector.findViewById(R.id.wcFilterLabel);
+        wcLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedType = 3;
+                selectedVersion = 2;
+                teamTypeSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        TextView typeCancelLabel = teamTypeSelector.findViewById(R.id.cancelLabel);
+        typeCancelLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedType = -1;
+                selectedVersion = -1;
+                teamTypeSelector.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        View halfStarButton = teamRatingSelector.findViewById(R.id.half);
+        halfStarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = 0;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        View oneStarButton = teamRatingSelector.findViewById(R.id.one);
+        oneStarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = 1;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        View oneHalfStarButton = teamRatingSelector.findViewById(R.id.oneHalf);
+        oneHalfStarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = 2;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        View twoStarButton = teamRatingSelector.findViewById(R.id.two);
+        twoStarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = 3;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        View twoHalfStarButton = teamRatingSelector.findViewById(R.id.twoHalf);
+        twoHalfStarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = 4;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        View threeStarButton = teamRatingSelector.findViewById(R.id.three);
+        threeStarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = 5;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        View threeHalfStarButton = teamRatingSelector.findViewById(R.id.threeHalf);
+        threeHalfStarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = 6;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        View fourStarButton = teamRatingSelector.findViewById(R.id.four);
+        fourStarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = 7;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        View fourHalfStarButton = teamRatingSelector.findViewById(R.id.fourHalf);
+        fourHalfStarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = 8;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+        View fiveStarButton = teamRatingSelector.findViewById(R.id.five);
+        fiveStarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = 9;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+                rollTeams();
+            }
+        });
+
+
+        TextView ratingCancelLabel = teamRatingSelector.findViewById(R.id.cancelLabel);
+        ratingCancelLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedStars = -1;
+                teamRatingSelector.setVisibility(View.INVISIBLE);
+            }
+        });
+
         progress.dismiss();
     }
 
     private void rollPlayers() {
-        ImageView player1img = findViewById(R.id.player1controller);
-        ImageView player2img = findViewById(R.id.player2controller);
-        ImageView player3img = findViewById(R.id.player3controller);
-        ImageView player4img = findViewById(R.id.player4controller);
+        ImageView[] playersHomeTeamImages = { findViewById(R.id.player1team1image), findViewById(R.id.player2team1image), findViewById(R.id.player3team1image), findViewById(R.id.player4team1image) };
+        ImageView[] playersAwayTeamImages = { findViewById(R.id.player1team2image), findViewById(R.id.player2team2image), findViewById(R.id.player3team2image), findViewById(R.id.player4team2image) };
 
-        int[] players = {R.drawable.p1, R.drawable.p2, R.drawable.p3, R.drawable.p4};
-        shufflePlayers(players);
+        for (ImageView playersImage : playersHomeTeamImages) {
+            playersImage.setVisibility(View.INVISIBLE);
+        }
 
-        player1img.setImageResource(players[0]);
-        player2img.setImageResource(players[1]);
-        player3img.setImageResource(players[2]);
-        player4img.setImageResource(players[3]);
+        for (ImageView playersImage : playersAwayTeamImages) {
+            playersImage.setVisibility(View.INVISIBLE);
+        }
+
+        int[] players = {0, 1, 2, 3};
+        do {
+            shufflePlayers(players);
+        } while ((players[0]+players[1] == lastShuffledPlayers[0]+lastShuffledPlayers[1]) || (players[0]+players[1] == lastShuffledPlayers[2]+lastShuffledPlayers[3]));
+        lastShuffledPlayers = players;
+
+        playersHomeTeamImages[players[0]].setVisibility(View.VISIBLE);
+        playersHomeTeamImages[players[1]].setVisibility(View.VISIBLE);
+        playersAwayTeamImages[players[2]].setVisibility(View.VISIBLE);
+        playersAwayTeamImages[players[3]].setVisibility(View.VISIBLE);
     }
 
     private void shufflePlayers(int[] players) {
@@ -103,17 +313,32 @@ public class MainActivity extends AppCompatActivity {
             version = 1;
         }
         if ((selectedType == -1) && (selectedStars == -1)) {
-            do {
-                pickedTeams = rollTeamsNoFilter(version);
-            } while (pickedTeams.size() < 2);
+            try {
+                do {
+                    pickedTeams = rollTeamsNoFilter(version);
+                } while (pickedTeams.size() < 2);
+            } catch (NoSuchElementException ex) {
+                rollTeams();
+                return;
+            }
         } else if (selectedStars == -1) {
-            do {
-                pickedTeams = rollTeamsByType(version, selectedType);
-            } while (pickedTeams.size() < 2);
+            try {
+                do {
+                    pickedTeams = rollTeamsByType(version, selectedType);
+                } while (pickedTeams.size() < 2);
+            } catch (NoSuchElementException ex) {
+                rollTeams();
+                return;
+            }
         } else if (selectedType == -1) {
-            do {
-                pickedTeams = rollTeamsByStars(version, selectedStars);
-            } while (pickedTeams.size() < 2);
+            try {
+                do {
+                    pickedTeams = rollTeamsByStars(version, selectedStars);
+                } while (pickedTeams.size() < 2);
+            } catch (NoSuchElementException ex) {
+                rollTeams();
+                return;
+            }
         } else {
             try {
                 pickedTeams = rollTeamsByStarsAndType(version, selectedType, selectedStars);
@@ -127,7 +352,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Set<Team> rollTeamsByStarsAndType(int version, int type, int stars) {
-        Team homeTeam = TeamDao.getRandomTeamByStarsAndType(this, version, RATING[stars], TYPE[type]);
+        Team homeTeam = TeamDao.getRandomTeamByStarsAndType(this, version, RATING[stars], TYPES_TAGS[type]);
         return getTeamsBasedOnHomeTeam(homeTeam);
     }
 
@@ -137,7 +362,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Set<Team> rollTeamsByType(int version, int type) {
-        Team homeTeam = TeamDao.getRandomTeamByType(this, version, TYPE[type]);
+        Team homeTeam = TeamDao.getRandomTeamByType(this, version, TYPES_TAGS[type]);
         return getTeamsBasedOnHomeTeam(homeTeam);
     }
 
@@ -163,103 +388,194 @@ public class MainActivity extends AppCompatActivity {
         Team awayTeam = it.next();
         setAwayTeamLabels(awayTeam);
 
-        fillEasterEggs(homeTeam, awayTeam);
+        fillFlavor(homeTeam, awayTeam);
 
         TextView matchType = findViewById(R.id.matchTypeLabel);
-        matchType.setText(homeTeam.getType());
+        for (int i=0; i<TYPES_TAGS.length; i++ ) {
+            if (TYPES_TAGS[i].equals(homeTeam.getType())) {
+                matchType.setText(TYPES[i]);
+                break;
+            }
+        }
 
-        ImageView starsValue = findViewById(R.id.matchRatingValue);
-        int[] starsImages = {R.drawable.stars05, R.drawable.stars10, R.drawable.stars15, R.drawable.stars20, R.drawable.stars25, R.drawable.stars30, R.drawable.stars35, R.drawable.stars40, R.drawable.stars45, R.drawable.stars50};
-        starsValue.setImageResource(starsImages[homeTeam.getRatingIndex()]);
+        ImageView star1 = findViewById(R.id.star1);
+        ImageView star2 = findViewById(R.id.star2);
+        ImageView star3 = findViewById(R.id.star3);
+        ImageView star4 = findViewById(R.id.star4);
+        ImageView star5 = findViewById(R.id.star5);
+
+        int matchRating = homeTeam.getRatingIndex();
+
+        star1.setImageResource(R.drawable.star_half);
+        star2.setImageResource(R.drawable.star_empty);
+        star3.setImageResource(R.drawable.star_empty);
+        star4.setImageResource(R.drawable.star_empty);
+        star5.setImageResource(R.drawable.star_empty);
+
+        switch (matchRating) {
+            case 0:
+                star1.setImageResource(R.drawable.star_half);
+                break;
+            case 1:
+                star1.setImageResource(R.drawable.star_full);
+                break;
+            case 2:
+                star1.setImageResource(R.drawable.star_full);
+                star2.setImageResource(R.drawable.star_half);
+                break;
+            case 3:
+                star1.setImageResource(R.drawable.star_full);
+                star2.setImageResource(R.drawable.star_full);
+                break;
+            case 4:
+                star1.setImageResource(R.drawable.star_full);
+                star2.setImageResource(R.drawable.star_full);
+                star3.setImageResource(R.drawable.star_half);
+                break;
+            case 5:
+                star1.setImageResource(R.drawable.star_full);
+                star2.setImageResource(R.drawable.star_full);
+                star3.setImageResource(R.drawable.star_full);
+                break;
+            case 6:
+                star1.setImageResource(R.drawable.star_full);
+                star2.setImageResource(R.drawable.star_full);
+                star3.setImageResource(R.drawable.star_full);
+                star4.setImageResource(R.drawable.star_half);
+                break;
+            case 7:
+                star1.setImageResource(R.drawable.star_full);
+                star2.setImageResource(R.drawable.star_full);
+                star3.setImageResource(R.drawable.star_full);
+                star4.setImageResource(R.drawable.star_full);
+                break;
+            case 8:
+                star1.setImageResource(R.drawable.star_full);
+                star2.setImageResource(R.drawable.star_full);
+                star3.setImageResource(R.drawable.star_full);
+                star4.setImageResource(R.drawable.star_full);
+                star5.setImageResource(R.drawable.star_half);
+                break;
+            case 9:
+                star1.setImageResource(R.drawable.star_full);
+                star2.setImageResource(R.drawable.star_full);
+                star3.setImageResource(R.drawable.star_full);
+                star4.setImageResource(R.drawable.star_full);
+                star5.setImageResource(R.drawable.star_full);
+                break;
+
+        }
     }
 
-    private void fillEasterEggs(Team homeTeam, Team awayTeam) {
-        TextView flavorLabel = findViewById(R.id.flavorText);
-        flavorLabel.setText(easterEggs.execute(homeTeam, awayTeam));
+    private void fillFlavor(Team homeTeam, Team awayTeam) {
+        String flavor = flavors.execute(homeTeam, awayTeam);
+        TextView flavorLabel = findViewById(R.id.flavorTextLabel);
+        flavorLabel.setText(flavor);
     }
 
     private void setAwayTeamLabels(Team awayTeam) {
-        TeamView awayTeamView = findViewById(R.id.awayTeam);
-        awayTeamView.setTeam(awayTeam);
+        // setting the league/country label
+        TextView awayTeamLeagueCountryLabel = findViewById(R.id.awayTeamLeagueCountryLabel);
+        String labelString = "";
+        if (!"N/A".equals(awayTeam.getLeague())) {
+            labelString = awayTeam.getLeague();
+        }
+        if (!"N/A".equals(awayTeam.getCountry())) {
+            labelString = labelString.concat(String.format(" (%s)", awayTeam.getCountry()));
+        }
+        awayTeamLeagueCountryLabel.setText(labelString.toUpperCase());
+
+        // setting the team name label
+        TextView awayTeamNameLabel = findViewById(R.id.awayTeamNameLabel);
+        awayTeamNameLabel.setText(String.format("%s", awayTeam.getName()));
+
+        // setting the badge
+        ImageView awayTeamBadge = findViewById(R.id.awayTeamBadge);
+        awayTeamBadge.setContentDescription(awayTeam.getName());
+
+        try {
+            String formattedName = awayTeam.getName().toLowerCase().replaceAll("[ ']", "_");
+            String badgeFilename = "badges/" + awayTeam.getType().toLowerCase() + "_" + formattedName + ".png";
+            InputStream badgeInputStream = this.getAssets().open(badgeFilename);
+            awayTeamBadge.setImageBitmap(BitmapFactory.decodeStream(badgeInputStream));
+            badgeInputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // setting attack label
+        TextView awayTeamAttackValue = findViewById(R.id.awayTeamAttackValue);
+        awayTeamAttackValue.setText(String.format("%s", awayTeam.getAttack()));
+
+        // setting midfield label
+        TextView awayTeamMidfieldValue = findViewById(R.id.awayTeamMidfieldValue);
+        awayTeamMidfieldValue.setText(String.format("%s", awayTeam.getMidfield()));
+
+        // setting defense label
+        TextView awayTeamDefenseValue = findViewById(R.id.awayTeamDefenseValue);
+        awayTeamDefenseValue.setText(String.format("%s", awayTeam.getDefense()));
     }
 
     private void setHomeTeamLabels(Team homeTeam) {
-        TeamView homeTeamView = findViewById(R.id.homeTeam);
-        homeTeamView.setTeam(homeTeam);
-    }
+        // setting the league/country label
+        TextView homeTeamLeagueCountryLabel = findViewById(R.id.homeTeamLeagueCountryLabel);
+        String labelString = "";
+        if (!"N/A".equals(homeTeam.getLeague())) {
+            labelString = homeTeam.getLeague();
+        }
+        if (!"N/A".equals(homeTeam.getCountry())) {
+            labelString = labelString.concat(String.format(" (%s)", homeTeam.getCountry()));
+        }
+        homeTeamLeagueCountryLabel.setText(labelString.toUpperCase());
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
+        // setting the team name label
+        TextView homeTeamNameLabel = findViewById(R.id.homeTeamNameLabel);
+        homeTeamNameLabel.setText(String.format("%s", homeTeam.getName()));
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        Toast toast;
-        switch(item.getItemId()) {
-            case R.id.rerollPlayers:
-                rollPlayers();
-                break;
-            case R.id.rerollTeams:
-                rollTeams();
-                break;
-            case R.id.starsFilter:
-                builder.setTitle("Choose the team's stars");
-                builder.setItems(RATING, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        selectedStars = i;
-                        rollTeams();
-                    }
-                });
-                builder.show();
-                break;
-            case R.id.resetFilters:
-                selectedStars = -1;
-                selectedType = -1;
-                selectedVersion = -1;
-                toast = Toast.makeText(getApplicationContext(), "Cleared filters!", Toast.LENGTH_SHORT);
-                toast.show();
-                break;
-            case R.id.typeFilter:
-                builder.setTitle("Choose the team's type");
-                builder.setItems(TYPES, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        selectedType = i;
-                        if (selectedType == 3) {
-                            selectedVersion = 2;
-                        } else {
-                            selectedVersion = -1;
-                        }
-                        rollTeams();
-                    }
-                });
-                builder.show();
-                break;
-            case R.id.options:
-                // open options
-                toast = Toast.makeText(getApplicationContext(), "Options soon...", Toast.LENGTH_SHORT);
-                toast.show();
-                break;
-            case R.id.about:
-                // open about modal
-                toast = Toast.makeText(getApplicationContext(), "About soon...",Toast.LENGTH_SHORT);
-                toast.show();
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
+        // setting the badge
+        ImageView homeTeamBadge = findViewById(R.id.homeTeamBadge);
+        homeTeamBadge.setContentDescription(homeTeam.getName());
+
+        try {
+            String formattedName = homeTeam.getName().toLowerCase().replaceAll("[ ']", "_");
+            String badgeFilename = "badges/" + homeTeam.getType().toLowerCase() + "_" + formattedName + ".png";
+            InputStream badgeInputStream = this.getAssets().open(badgeFilename);
+            homeTeamBadge.setImageBitmap(BitmapFactory.decodeStream(badgeInputStream));
+            badgeInputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-        return true;
+        // setting attack label
+        TextView homeTeamAttackValue = findViewById(R.id.homeTeamAttackValue);
+        homeTeamAttackValue.setText(String.format("%s", homeTeam.getAttack()));
+
+        // setting midfield label
+        TextView homeTeamMidfieldValue = findViewById(R.id.homeTeamMidfieldValue);
+        homeTeamMidfieldValue.setText(String.format("%s", homeTeam.getMidfield()));
+
+        // setting defense label
+        TextView homeTeamDefenseValue = findViewById(R.id.homeTeamDefenseValue);
+        homeTeamDefenseValue.setText(String.format("%s", homeTeam.getDefense()));
     }
 
     @Override
     public void onResume() {
         super.onResume();
         mSensorManager.registerListener(mShakeDetector, mAccelerometer,	SensorManager.SENSOR_DELAY_UI);
+        hideNavbar();
+    }
+
+    public void hideNavbar() {
+        if (Build.VERSION.SDK_INT > 15 && Build.VERSION.SDK_INT < 19) { // lower api
+            View v = this.getWindow().getDecorView();
+            v.setSystemUiVisibility(View.GONE);
+        } else if(Build.VERSION.SDK_INT >= 19) {
+            //for new api versions.
+            View decorView = getWindow().getDecorView();
+            int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+            decorView.setSystemUiVisibility(uiOptions);
+        }
     }
 
     @Override

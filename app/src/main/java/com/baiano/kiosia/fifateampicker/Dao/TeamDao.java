@@ -53,7 +53,8 @@ public class TeamDao {
 
     public static Team getTeamBasedOn(Context context, Team homeTeam) {
         String query = "SELECT "+COLUMN_NAMES+" FROM team AS t INNER JOIN league AS l ON t.league=l.id "+
-                "WHERE t.id!='"+homeTeam.getId()+"' AND t.league=l.id AND t.version='"+homeTeam.getVersion()+"' AND t.rating='"+homeTeam.getRating()+"' ORDER BY RANDOM() LIMIT 1";
+                "WHERE t.id!='"+homeTeam.getId()+"' AND t.league=l.id AND t.version='"+homeTeam.getVersion()+
+                "' AND t.rating='"+homeTeam.getRating()+"' AND t.type='"+homeTeam.getType()+"' ORDER BY RANDOM() LIMIT 1";
         return executeQuery(context, query).iterator().next();
     }
 
@@ -77,7 +78,6 @@ public class TeamDao {
 
     @NonNull
     private static Set<Team> executeQuery(Context context, String query) {
-        System.out.println(query);
         Set<Team> result = new HashSet<>();
         Cursor cursor = DatabaseHelper.getInstance(context).executeQuery(query);
         int idColumn = cursor.getColumnIndex("id");

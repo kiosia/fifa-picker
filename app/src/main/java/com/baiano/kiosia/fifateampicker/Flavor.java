@@ -2,7 +2,7 @@ package com.baiano.kiosia.fifateampicker;
 
 import com.baiano.kiosia.fifateampicker.Model.Team;
 
-class EasterEgg {
+class Flavor {
     private String conditionType;
     private String operator;
     private String factor1;

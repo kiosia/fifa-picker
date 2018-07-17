@@ -6,166 +6,690 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/matchRatingTitle"
+    <!--MID VERTICAL-->
+    <android.support.constraint.Guideline
+        android:id="@+id/midVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!--MID HOME TEAM-->
+    <android.support.constraint.Guideline
+        android:id="@+id/midHomeTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <!--MID AWAY TEAM-->
+    <android.support.constraint.Guideline
+        android:id="@+id/midAwayTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.73" />
+
+    <!--BACKGROUND-->
+    <ImageView
+        android:id="@+id/background"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center_horizontal"
-        android:text="@string/matchRating"
-        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <!--MATCH TYPE BACKGROUND-->
+    <ImageView
+        android:id="@+id/matchTypeBackground"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/teamsBackground"
+        app:layout_constraintEnd_toEndOf="@+id/teamsBackground"
+        app:srcCompat="@drawable/filter_bg" />
+
+    <!--TEAMS BACKGROUND-->
+    <ImageView
+        android:id="@+id/teamsBackground"
+        android:layout_width="330dp"
+        android:layout_height="176dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/controlsBackground"
+        app:layout_constraintEnd_toEndOf="@+id/controlsBackground"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/homeTeam"
-        tools:text="Match Rating" />
+        app:layout_constraintStart_toStartOf="@+id/controlsBackground"
+        app:srcCompat="@drawable/bg_teams" />
 
+    <!--CONTROLS BACKGROUND-->
     <ImageView
-        android:id="@+id/matchRatingValue"
-        android:layout_width="159dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/controlsBackground"
+        android:layout_width="330dp"
+        android:layout_height="225dp"
+        android:layout_marginBottom="94dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchRatingTitle"
-        app:srcCompat="@drawable/stars50" />
+        app:srcCompat="@drawable/bg_controls" />
 
-    <ImageView
-        android:id="@+id/player1controller"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/player1Label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeTeam"
-        app:srcCompat="@drawable/p1" />
-
-    <ImageView
-        android:id="@+id/player2controller"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:contentDescription="@string/player2Label"
-        app:layout_constraintBottom_toBottomOf="@+id/player1controller"
-        app:layout_constraintStart_toEndOf="@+id/player1controller"
-        app:srcCompat="@drawable/p2" />
-
-    <ImageView
-        android:id="@+id/player3controller"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/player3Label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/awayTeam"
-        app:srcCompat="@drawable/p3" />
-
-    <ImageView
-        android:id="@+id/player4controller"
-        android:layout_width="77dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:contentDescription="@string/player4Label"
-        app:layout_constraintBottom_toBottomOf="@+id/player3controller"
-        app:layout_constraintEnd_toStartOf="@+id/player3controller"
-        app:srcCompat="@drawable/p4" />
-
-    <TextView
-        android:id="@+id/vsLabel"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="@string/vsLabel"
-        app:layout_constraintBottom_toBottomOf="@+id/player4controller"
-        app:layout_constraintEnd_toStartOf="@+id/player4controller"
-        app:layout_constraintStart_toEndOf="@+id/player2controller"
-        app:layout_constraintTop_toTopOf="@+id/player4controller"
-        tools:text="X" />
-
-    <com.baiano.kiosia.fifateampicker.TeamView
-        android:id="@+id/homeTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.baiano.kiosia.fifateampicker.TeamView
-        android:id="@+id/awayTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/homeTeam" />
-
+    <!--MATCH TYPE LABEL-->
     <TextView
         android:id="@+id/matchTypeLabel"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:contentDescription="@string/matchTypeLabel"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/awayTeam"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="International" />
+        android:layout_marginTop="11dp"
+        android:gravity="top|center_horizontal"
+        android:textColor="#27235d"
+        android:textSize="17sp"
+        android:typeface="normal"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toEndOf="@+id/matchTypeBackground"
+        app:layout_constraintStart_toStartOf="@+id/matchTypeBackground"
+        app:layout_constraintTop_toTopOf="@+id/matchTypeBackground"
+        tools:text="INTERNATIONAL" />
 
+    <!--HOME TEAM LEAGUE LABEL-->
     <TextView
-        android:id="@+id/matchTypeTitle"
+        android:id="@+id/homeTeamLeagueCountryLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:gravity="center_horizontal"
-        android:text="@string/matchTypeLabel"
-        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
-        app:layout_constraintBottom_toTopOf="@+id/matchTypeLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Match Type" />
-
-    <TextView
-        android:id="@+id/flavorText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:gravity="center_vertical|center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintStart_toStartOf="@+id/teamsBackground"
+        app:layout_constraintTop_toTopOf="@+id/teamsBackground"
+        tools:text="INTERNATIONAL" />
+
+    <!--HOME TEAM NAME LABEL-->
+    <TextView
+        android:id="@+id/homeTeamNameLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintStart_toStartOf="@+id/teamsBackground"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamLeagueCountryLabel"
+        tools:text="BRAZIL" />
+
+    <!--HOME TEAM BADGE-->
+    <ImageView
+        android:id="@+id/homeTeamBadge"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintStart_toStartOf="@+id/teamsBackground"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamNameLabel"
+        app:srcCompat="@drawable/badge_placeholder"
+        tools:srcCompat="@drawable/badge_placeholder" />
+
+    <!--HOME TEAM ATTACK LABEL-->
+    <TextView
+        android:id="@+id/homeTeamAttackLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/attackLabel"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toStartOf="@+id/midHomeTeam"
+        app:layout_constraintStart_toStartOf="@+id/teamsBackground"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamBadge" />
+
+    <!--HOME TEAM MIDFIELD LABEL-->
+    <TextView
+        android:id="@+id/homeTeamMidfieldLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/midfieldLabel"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintStart_toStartOf="@+id/teamsBackground"
+        app:layout_constraintTop_toTopOf="@+id/homeTeamAttackLabel" />
+
+    <!--HOME TEAM DEFENSE LABEL-->
+    <TextView
+        android:id="@+id/homeTeamDefenseLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/defenseLabel"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintStart_toStartOf="@+id/midHomeTeam"
+        app:layout_constraintTop_toTopOf="@+id/homeTeamMidfieldLabel" />
+
+    <!--HOME TEAM ATTACK VALUE-->
+    <TextView
+        android:id="@+id/homeTeamAttackValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toStartOf="@+id/midHomeTeam"
+        app:layout_constraintStart_toStartOf="@+id/teamsBackground"
+        app:layout_constraintTop_toTopOf="@+id/homeTeamMidfieldValue"
+        tools:text="77" />
+
+    <!--HOME TEAM MIDFIELD VALUE-->
+    <TextView
+        android:id="@+id/homeTeamMidfieldValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/teamsBackground"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamMidfieldLabel"
+        tools:text="74" />
+
+    <!--HOME TEAM DEFENSE VALUE-->
+    <TextView
+        android:id="@+id/homeTeamDefenseValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintStart_toStartOf="@+id/midHomeTeam"
+        app:layout_constraintTop_toTopOf="@+id/homeTeamMidfieldValue"
+        tools:text="77" />
+
+
+
+    <!--AWAY TEAM LEAGUE LABEL-->
+    <TextView
+        android:id="@+id/awayTeamLeagueCountryLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintEnd_toEndOf="@+id/teamsBackground"
+        app:layout_constraintTop_toTopOf="@+id/teamsBackground"
+        tools:text="INTERNATIONAL" />
+
+    <!--AWAY TEAM NAME LABEL-->
+    <TextView
+        android:id="@+id/awayTeamNameLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintEnd_toEndOf="@+id/teamsBackground"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamLeagueCountryLabel"
+        tools:text="BRAZIL" />
+
+    <!--AWAY TEAM BADGE-->
+    <ImageView
+        android:id="@+id/awayTeamBadge"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintEnd_toEndOf="@+id/teamsBackground"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamNameLabel"
+        app:srcCompat="@drawable/badge_placeholder"
+        tools:srcCompat="@drawable/badge_placeholder" />
+
+    <!--AWAY TEAM ATTACK LABEL-->
+    <TextView
+        android:id="@+id/awayTeamAttackLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/attackLabel"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintEnd_toStartOf="@+id/midAwayTeam"
+        app:layout_constraintTop_toTopOf="@+id/awayTeamMidfieldLabel" />
+
+    <!--AWAY TEAM MIDFIELD LABEL-->
+    <TextView
+        android:id="@+id/awayTeamMidfieldLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/midfieldLabel"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintEnd_toEndOf="@+id/teamsBackground"
+        app:layout_constraintTop_toTopOf="@+id/awayTeamDefenseLabel" />
+
+    <!--AWAY TEAM DEFENSE LABEL-->
+    <TextView
+        android:id="@+id/awayTeamDefenseLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/defenseLabel"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintStart_toStartOf="@+id/midAwayTeam"
+        app:layout_constraintEnd_toEndOf="@+id/teamsBackground"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamBadge" />
+
+    <!--AWAY TEAM ATTACK VALUE-->
+    <TextView
+        android:id="@+id/awayTeamAttackValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintEnd_toStartOf="@+id/midAwayTeam"
+        app:layout_constraintTop_toTopOf="@+id/awayTeamMidfieldValue"
+        tools:text="77" />
+
+    <!--AWAY TEAM MIDFIELD VALUE-->
+    <TextView
+        android:id="@+id/awayTeamMidfieldValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@+id/teamsBackground"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamMidfieldLabel"
+        tools:text="74" />
+
+    <!--AWAY TEAM DEFENSE VALUE-->
+    <TextView
+        android:id="@+id/awayTeamDefenseValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintStart_toStartOf="@+id/midAwayTeam"
+        app:layout_constraintEnd_toEndOf="@+id/teamsBackground"
+        app:layout_constraintTop_toTopOf="@+id/awayTeamMidfieldValue"
+        tools:text="77" />
+
+    <!--RATING LABEL-->
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="21dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/star2"
+        app:layout_constraintTop_toTopOf="@+id/star2"
+        app:srcCompat="@drawable/star_full" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="21dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintTop_toTopOf="@+id/star3"
+        app:srcCompat="@drawable/star_full" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/teamsBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/player4controller"
-        tools:text="NANI?!" />
+        app:srcCompat="@drawable/star_full" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="21dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintTop_toTopOf="@+id/star3"
+        app:srcCompat="@drawable/star_full" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="21dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintStart_toEndOf="@+id/star4"
+        app:layout_constraintTop_toTopOf="@+id/star4"
+        app:srcCompat="@drawable/star_half" />
+
+    <!--TEAMS SHUFFLE BUTTON-->
+    <ImageView
+        android:id="@+id/teamsShuffleButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintStart_toStartOf="@+id/controlsBackground"
+        app:layout_constraintTop_toTopOf="@+id/controllersShuffleButton"
+        app:srcCompat="@drawable/button_shuffle_teams" />
+
+    <!--TEAMS SHUFFLE LABEL-->
+    <TextView
+        android:id="@+id/teamsShuffleLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:shadowColor="#80000000"
+        android:shadowDx="1.2246467991473532e-16"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/rerollTeamsButton"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintStart_toStartOf="@+id/controlsBackground"
+        app:layout_constraintTop_toBottomOf="@+id/teamsShuffleButton"
+        tools:text="SHUFFLE TEAMS" />
+
+    <!--CONTROLLERS SHUFFLE BUTTON-->
+    <ImageView
+        android:id="@+id/controllersShuffleButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/controlsBackground"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintTop_toBottomOf="@+id/controlsBackground"
+        app:srcCompat="@drawable/button_shuffle_controls" />
+
+    <!--CONTROLLERS SHUFFLE LABEL-->
+    <TextView
+        android:id="@+id/controllersShuffleLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:shadowColor="#80000000"
+        android:shadowDx="1.2246467991473532e-16"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/rerollPlayersButton"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintEnd_toEndOf="@+id/controlsBackground"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintTop_toBottomOf="@+id/controllersShuffleButton"
+        tools:text="SHUFFLE CONTROLLERS" />
+
+    <!--CONTROLLERS TEAM 1-->
+    <ImageView
+        android:id="@+id/player1team1image"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="@+id/controlsBackground"
+        app:layout_constraintTop_toTopOf="@+id/controlsBackground"
+        app:srcCompat="@drawable/control_1" />
+
+    <ImageView
+        android:id="@+id/player2team1image"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/player1team1image"
+        app:layout_constraintTop_toBottomOf="@+id/player1team1image"
+        app:srcCompat="@drawable/control_2" />
+
+    <ImageView
+        android:id="@+id/player3team1image"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/player2team1image"
+        app:layout_constraintTop_toBottomOf="@+id/player2team1image"
+        app:srcCompat="@drawable/control_3" />
+
+    <ImageView
+        android:id="@+id/player4team1image"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/player3team1image"
+        app:layout_constraintTop_toBottomOf="@+id/player3team1image"
+        app:srcCompat="@drawable/control_4" />
+
+    <!--CONTROLLERS TEAM 2-->
+    <ImageView
+        android:id="@+id/player1team2image"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/controlsBackground"
+        app:layout_constraintTop_toTopOf="@+id/controlsBackground"
+        app:srcCompat="@drawable/control_1" />
+
+    <ImageView
+        android:id="@+id/player2team2image"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/player1team2image"
+        app:layout_constraintTop_toBottomOf="@+id/player1team2image"
+        app:srcCompat="@drawable/control_2" />
+
+    <ImageView
+        android:id="@+id/player3team2image"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/player2team2image"
+        app:layout_constraintTop_toBottomOf="@+id/player2team2image"
+        app:srcCompat="@drawable/control_3" />
+
+    <ImageView
+        android:id="@+id/player4team2image"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/player3team2image"
+        app:layout_constraintTop_toBottomOf="@+id/player3team2image"
+        app:srcCompat="@drawable/control_4" />
+
+    <!--FLAVOR-->
+    <TextView
+        android:id="@+id/flavorTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="8sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        app:layout_constraintBottom_toTopOf="@+id/awayTeamAttackLabel"
+        app:layout_constraintEnd_toStartOf="@+id/midAwayTeam"
+        app:layout_constraintStart_toStartOf="@+id/midHomeTeam"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamNameLabel"
+        tools:text="flavor text" />
+
+
+    <!--MENUS-->
+    <include
+        android:id="@+id/teamTypeSelector"
+        layout="@layout/team_type_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/teamsBackground"
+        app:layout_constraintStart_toStartOf="@+id/teamsBackground"
+        app:layout_constraintTop_toTopOf="@+id/teamsBackground" />
+
+    <include
+        android:id="@+id/teamRatingSelector"
+        layout="@layout/team_rating_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/controlsBackground"
+        app:layout_constraintStart_toStartOf="@+id/controlsBackground"
+        app:layout_constraintTop_toTopOf="@+id/controlsBackground" />
 
 </android.support.constraint.ConstraintLayout>
