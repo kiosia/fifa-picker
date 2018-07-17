@@ -12,11 +12,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-class EasterEggs {
-    private ArrayList<EasterEgg> easterEggs;
+class Flavors {
+    private ArrayList<Flavor> flavors;
 
-    EasterEggs(Context context) {
-        ArrayList<EasterEgg> easterEggs = new ArrayList<>();
+    Flavors(Context context) {
+        ArrayList<Flavor> flavors = new ArrayList<>();
         String filename = "easter_eggs/easter_eggs.json";
         String json;
         try {
@@ -28,33 +28,33 @@ class EasterEggs {
             json = new String(buffer, "UTF-8");
         } catch (IOException ex) {
             ex.printStackTrace();
-            this.easterEggs = null;
+            this.flavors = null;
             return;
         }
         try {
             JSONObject obj = new JSONObject(json);
-            JSONArray m_jArry = obj.getJSONArray("easterEggs");
+            JSONArray jsonArray = obj.getJSONArray("easterEggs");
 
-            for (int i = 0; i < m_jArry.length(); i++) {
-                JSONObject jsonObject = m_jArry.getJSONObject(i);
-                EasterEgg easterEgg = new EasterEgg();
-                easterEgg.setConditionType(jsonObject.getString("conditionType"));
-                easterEgg.setOperator(jsonObject.getString("operator"));
-                easterEgg.setFactor1(jsonObject.getString("factor1"));
-                easterEgg.setFactor2(jsonObject.getString("factor2"));
-                easterEgg.setResult(jsonObject.getString("result"));
-                easterEggs.add(easterEgg);
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                Flavor flavor = new Flavor();
+                flavor.setConditionType(jsonObject.getString("conditionType"));
+                flavor.setOperator(jsonObject.getString("operator"));
+                flavor.setFactor1(jsonObject.getString("factor1"));
+                flavor.setFactor2(jsonObject.getString("factor2"));
+                flavor.setResult(jsonObject.getString("result"));
+                flavors.add(flavor);
             }
         } catch (JSONException ex) {
             ex.printStackTrace();
         }
-        this.easterEggs = easterEggs;
+        this.flavors = flavors;
     }
 
     public String execute(Team homeTeam, Team awayTeam) {
         StringBuilder result = new StringBuilder();
-        for (EasterEgg easterEgg : this.easterEggs) {
-            String aux = easterEgg.execute(homeTeam, awayTeam);
+        for (Flavor flavor : this.flavors) {
+            String aux = flavor.execute(homeTeam, awayTeam);
             if (!"".equals(aux)) {
                 result.append(aux).append('\n');
             }

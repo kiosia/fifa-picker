@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    tools:layout_editor_absoluteX="166dp"
+    tools:layout_editor_absoluteY="8dp"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/typeFilterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/typeFilter"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        tools:text="Filter by team Type" />
+
+    <TextView
+        android:id="@+id/blankLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:fontFamily="@font/bebas_neue_bold" />
+
+    <TextView
+        android:id="@+id/regFilterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:lineSpacingExtra="12sp"
+        android:text="@string/regFilterButton"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        tools:text="Regular" />
+
+    <TextView
+        android:id="@+id/blankLine2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="8sp"
+        app:fontFamily="@font/bebas_neue_bold" />
+
+    <TextView
+        android:id="@+id/intFilterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intFilterButton"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        tools:text="International" />
+
+    <TextView
+        android:id="@+id/blankLine3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="8sp"
+        app:fontFamily="@font/bebas_neue_bold" />
+
+    <TextView
+        android:id="@+id/wmnFilterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wmnFilterButton"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        tools:text="Women" />
+
+    <TextView
+        android:id="@+id/blankLine4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="8sp"
+        app:fontFamily="@font/bebas_neue_bold" />
+
+    <TextView
+        android:id="@+id/wcFilterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wcFilterButton"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        app:fontFamily="@font/bebas_neue_bold"
+        tools:text="World Cup" />
+
+    <TextView
+        android:id="@+id/blankLine5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        app:fontFamily="@font/bebas_neue_bold" />
+
+    <TextView
+        android:id="@+id/cancelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancelTypeFilter"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:fontFamily="@font/bebas_neue_bold" />
+
+    <TextView
+        android:id="@+id/blankLine6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        app:fontFamily="@font/bebas_neue_bold" />
+
+</LinearLayout>
